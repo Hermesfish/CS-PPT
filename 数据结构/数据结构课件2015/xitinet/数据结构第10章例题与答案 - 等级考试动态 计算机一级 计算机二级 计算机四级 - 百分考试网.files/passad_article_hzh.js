@@ -1,0 +1,18 @@
+document.writeln("<script type=\"text\/javascript\"><!--");
+document.writeln("google_ad_client = \"pub-4256750528022331\";");
+document.writeln("google_alternate_color = \"FFFFFF\";");
+document.writeln("google_ad_width = 336;");
+document.writeln("google_ad_height = 280;");
+document.writeln("google_ad_format = \"336x280_as\";");
+document.writeln("google_ad_type = \"text\";");
+document.writeln("\/\/2006-11-22: pass100_ahzh");
+document.writeln("google_ad_channel = \"3727782972\";");
+document.writeln("google_color_border = \"FFFFFF\";");
+document.writeln("google_color_bg = \"FFFFFF\";");
+document.writeln("google_color_link = \"1656AD\";");
+document.writeln("google_color_text = \"000000\";");
+document.writeln("google_color_url = \"000000\";");
+document.writeln("\/\/--><\/script>");
+document.writeln("<script type=\"text\/javascript\"");
+document.writeln("  src=\"http:\/\/pagead2.googlesyndication.com\/pagead\/show_ads.js\">");
+document.writeln("<\/script>");

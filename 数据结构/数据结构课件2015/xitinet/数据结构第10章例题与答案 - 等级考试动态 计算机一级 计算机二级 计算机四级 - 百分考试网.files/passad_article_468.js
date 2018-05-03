@@ -1,0 +1,1 @@
+document.write('<a href="http://bbs.cooledu.com.cn/index.php?pass100l468"><img src="http://www.biyelunwen.com.cn/images/cooledu_468_60.gif" alt="精品教育网" border="0" /></a>')
