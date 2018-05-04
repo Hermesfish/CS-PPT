@@ -1,0 +1,98 @@
+ CODE SEGMENT
+ASSUME CS:CODE
+START:
+    MOV DX,28BH
+    MOV AL,10000001B
+    OUT DX,AL
+
+BEGIN:
+    MOV AL,0FFH
+AGAIN:
+    INC AL
+    MOV DX,280H
+    OUT DX,AL
+    MOV BX,100
+DELAY0:
+    MOV CX,0FFFH
+DELAY1:
+    LOOP DELAY1
+    DEC BX
+    JNZ DELAY0
+    CMP AL,0FFH
+    JZ DA
+    JMP AGAIN
+;8254
+DA: MOV AL,01110101B
+    MOV DX,293H
+    OUT DX,AL
+    MOV AL,00H
+    MOV DX,291H
+    OUT DX,AL
+    MOV AL,50H
+    OUT DX,AL
+
+    MOV AL,10110011B
+    MOV DX,293H
+    OUT DX,AL
+    MOV AL,00H
+    MOV DX,292H
+    OUT DX,AL
+    MOV AL,80H
+    OUT DX,AL
+;8255
+    MOV DX,28AH
+NEXT:   
+    IN AL,DX
+    TEST AL,1
+    JZ NEXT
+    JMP BEGIN
+CODE ENDS
+    END START
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

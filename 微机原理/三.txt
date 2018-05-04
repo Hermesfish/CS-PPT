@@ -1,0 +1,98 @@
+实验三 利用8255完成键盘输入功能
+a)	实验内容及要求
+学会使用8255，利用8255完成LED灯控制和键盘输入操作
+b)	硬件连接图：
+LED灯
+ 
+键盘
+ 
+c)	实验关键代码、调试过程及完成情况
+LED灯控制
+MOV DX,286H
+    MOV AL,90H;A口输入，B口输出
+    OUT DX,AL
+BEGIN:
+    MOV DX,280H
+    IN AL,DX
+    MOV DX,282H
+    OUT DX,AL
+MOV CX,02
+D:  LOOP D
+JMP BEGIN
+键盘输入：
+PORT_A EQU 288H
+PORT_B EQU 289H
+PORT_C EQU 28AH
+PORT_CTL EQU 28BH
+DATA SEGMENT
+TABLE  DB 77H,7BH,7DH,7EH,0B7H,0BBH,0BDH,0BEH
+       DB 0D7H,0DBH,0DDH,0DEH,0E7H,0EBH,0EDH,0EEH
+SHOW   DB 3FH,06H,5BH,4FH,66H,6DH,7DH,07H,7FH,6FH,77H,7CH
+       DB 39H,5EH,79H,71H,0FFH
+DATA ENDS
+
+
+CODE SEGMENT
+     ASSUME CS:CODE,DS:DATA
+START:
+
+     MOV AX,DATA
+     MOV DS,AX
+     MOV DX,PORT_CTL
+     MOV AL,10000010B;b输入，ac输出
+     OUT DX,AL
+BEGIN:
+     MOV DX,PORT_A
+     MOV AL,00H
+     OUT DX,AL
+     MOV DX,PORT_B  
+WAIT_PRES:
+     IN AL,DX
+     AND AL,0FH
+     CMP AL,0FH
+     JE WAIT_PRES
+
+     MOV CX,16EAH
+DELAY:LOOP DELAY
+
+     IN AL,DX
+     AND AL,0FH
+     CMP AL,0FH
+     JE WAIT_PRES
+
+     MOV AL,0FEH
+     MOV CL,AL
+NEXT_ROW:
+     MOV DX,PORT_A
+     OUT DX,AL
+     MOV DX,PORT_B
+     IN AL,DX
+     AND AL,0FH
+     CMP AL,0FH
+     JNE ENCODE
+     ROL CL,01H
+     MOV AL,CL
+     JMP NEXT_ROW
+ENCODE:
+     MOV BX,000FH
+     IN AL,DX
+NEXT_TRY:
+     CMP AL,TABLE[BX]
+     JE DONE
+     DEC BX
+     JNS NEXT_TRY
+
+DONE:
+MOV AL,SHOW[BX]
+     MOV DX,PORT_C
+     OUT DX,AL
+     JMP BEGIN
+EXIT:HLT
+CODE ENDS
+END START
+d)	遇到的问题及解决的方法
+判断键压：从A口向行线输入低电平，从B口读出，若其中有0值，有键压下
+确定键盘扫描码：0：三行三列，D7和D3为1,77H
+去抖动：利用延时去抖动
+e)	实验体会及建议
+通过键盘了解了8255在实际中的应用，也知道了8255的基本操作及用法

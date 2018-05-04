@@ -1,0 +1,457 @@
+<!DOCTYPE HTML>
+<!-- saved from url=(0037)http://www.jb51.net/article/41044.htm -->
+<!DOCTYPE html PUBLIC "" ""><HTML lang="zh-CN"><HEAD><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+ 
+<META charset="gb2312"> 
+<META name="viewport" content="width=device-width, initial-scale=1"> 
+<META http-equiv="Cache-Control" content="no-siteapp"> 
+<META http-equiv="Cache-Control" content="no-transform"> 
+<TITLE>浅析C++中单链表的增、删、改、减_C 语言_脚本之家</TITLE> 
+<META http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE"> 
+<META name="keywords" content="单链表,C++"> 
+<META name="description" content="以下是对C++中单链表的增、删、改、减进行了详细的介绍，需要的朋友可以过来参考下"> 
+<LINK href="http://m.jb51.net/article/41044.htm" rel="alternate" media="only screen and(max-width: 640px)"> 
+<META http-equiv="mobile-agent" content="format=html5; url=http://m.jb51.net/article/41044.htm"> 
+<META http-equiv="mobile-agent" content="format=xhtml; url=http://m.jb51.net/article/41044.htm"> 
+<SCRIPT type="text/javascript">
+var tougao="jingxian";var lmname="C 语言";
+(function(){var ua=navigator.userAgent.toLowerCase();var bIsIpad=ua.match(/ipad/i)=="ipad";var bIsIphoneOs=ua.match(/iphone os/i)=="iphone os";var bIsAndroid=ua.match(/android/i)=="android";var bIsWM=ua.match(/windows mobile/i)=="windows mobile";if(bIsIpad||bIsIphoneOs||bIsAndroid||bIsWM){window.location.href="http://m.jb51.net/article/41044.htm"}})();
+</SCRIPT>
+ <LINK href="浅析C++中单链表的增、删、改、减_C%20语言_脚本之家_files/base.css" rel="stylesheet" 
+type="text/css"> <LINK href="浅析C++中单链表的增、删、改、减_C%20语言_脚本之家_files/common8VYF8TQE.css" 
+rel="stylesheet" type="text/css"> 
+<SCRIPT src="http://img.jb51.net/jslib/jquery/jquery.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="http://img.jb51.net/js/common.js" type="text/javascript"></SCRIPT>
+ 
+<META name="GENERATOR" content="MSHTML 11.00.10586.20"></HEAD> 
+<BODY><!--head Star --> 
+<DIV id="head">
+<DIV class="toolBar">
+<DIV class="main"><!--topNav Star -->     
+<DIV class="topNav clearfix">
+<UL class="navList fl">
+  <LI>
+  <DIV class="one"><A href="http://www.jb51.net/" 
+  target="_blank">脚本之家</A></DIV></LI>
+  <LI>
+  <DIV class="one"><A href="http://www.jb51.net/softs/" target="_blank">软件下载<I 
+  class="icon"></I></A></DIV>
+  <DIV class="two"><A href="http://www.jb51.net/softs/android.html" target="_blank">android软件</A><A 
+  href="http://www.jb51.net/softs/mac.html" target="_blank">MAC软件</A><A href="http://www.jb51.net/fonts/%20target=" 
+  _blank"="">字体下载</A><A href="http://www.jb51.net/dll/" 
+  target="_blank">DLL下载</A></DIV></LI>
+  <LI>
+  <DIV class="one"><A href="http://www.jb51.net/codes/" target="_blank">源码下载<I 
+  class="icon"></I></A></DIV>
+  <DIV class="two"><A href="http://www.jb51.net/codes/asp.html" 
+  target="_blank">asp源码</A><A href="http://www.jb51.net/codes/php.html" target="_blank">php源码</A><A 
+  href="http://www.jb51.net/codes/aspnet.html" target="_blank">asp.net源码</A><A 
+  href="http://www.jb51.net/codes/jsp.html" target="_blank">jsp源码</A><A href="http://www.jb51.net/codes/editor.html" 
+  target="_blank">网页编辑器</A><A href="http://www.jb51.net/codes/list123_1.html" 
+  target="_blank">数据库管理</A><A href="http://www.jb51.net/codes/list124_1.html" 
+  target="_blank">常用组件</A></DIV></LI>
+  <LI>
+  <DIV class="one"><A href="http://tools.jb51.net/" target="_blank">在线工具<I 
+  class="icon"></I></A></DIV>
+  <DIV class="two"><A href="http://www.jb51.net/shouce/" 
+  target="_blank">在线手册</A><A href="http://www.jb51.net/tools/cssyasuo.shtml" 
+  target="_blank">CSS格式化</A><A href="http://tools.jb51.net/tools/js_geshihua.asp" 
+  target="_blank">JS格式化</A><A href="http://www.jb51.net/tools/html-js.htm" 
+  target="_blank">Html转化为Js</A><A href="http://tools.jb51.net/regex/javascript" 
+  target="_blank">js正则表达式</A></DIV></LI>
+  <LI>
+  <DIV class="one"><A href="http://www.jb51.net/w3school/" 
+  target="_blank">网页教程基础</A></DIV></LI>
+  <LI>
+  <DIV class="one"><A href="http://s.jb51.net/" 
+  target="_blank">服务器常用软件</A></DIV></LI>
+  <LI>
+  <DIV class="one"><A href="http://m.jb51.net/" target="_blank">手机版</A></DIV>
+  <DIV class="two"><IMG src=""></DIV></LI>
+  <LI class="watch">
+  <DIV class="one"><A href="http://weibo.com/jb51net" target="_blank" rel="nofollow"><I 
+  class="icon"></I>关注微信</A></DIV>
+  <DIV class="two"><IMG src=""></DIV></LI></UL>
+<DIV class="navUser mt5 fr" id="jb51_topbar"></DIV></DIV><!--topNav End -->   
+</DIV></DIV>
+<DIV class="main clearfix">
+<DIV class="mtb10 clearfix">
+<DIV class="logo"><A href="http://www.jb51.net/"><IMG title="脚本之家" alt="脚本之家" 
+src=""></A></DIV>
+<DIV class="logom fl" id="logo_m"></DIV>
+<DIV class="logor fr" id="logo_r"></DIV></DIV><!-- 导航--> 
+<DIV class="nav_top clearfix">
+<UL>
+  <LI><A href="http://www.jb51.net/web/">网页制作</A></LI>
+  <LI><A href="http://www.jb51.net/list/index_1.htm">网络编程</A></LI>
+  <LI><A href="http://www.jb51.net/list/index_96.htm">脚本专栏</A></LI>
+  <LI><A href="http://www.jb51.net/jiaoben/">脚本下载</A></LI>
+  <LI><A href="http://www.jb51.net/list/index_104.htm">数据库</A></LI>
+  <LI><A href="http://www.jb51.net/cms/">CMS教程</A></LI>
+  <LI><A href="http://www.jb51.net/books/">电子书籍</A></LI>
+  <LI><A href="http://www.jb51.net/pingmian/">平面设计</A></LI>
+  <LI><A href="http://www.jb51.net/media/">媒体动画</A></LI>
+  <LI><A href="http://www.jb51.net/os/">操作系统</A></LI>
+  <LI><A href="http://www.jb51.net/yunying/">网站运营</A></LI>
+  <LI><A href="http://www.jb51.net/hack/">网络安全</A></LI>
+  <LI class="last"><A href="http://www.jb51.net/shouce/">在线手册</A></LI></UL></DIV><!--导航结束--> 
+<DIV class="subnav clearfix">
+<UL>
+  <LI><A title="C#教程" 
+  href="http://www.jb51.net/list/list_85_1.htm">C#教程</A></LI> 
+  <LI><A title="vb" href="http://www.jb51.net/list/list_93_1.htm">vb</A></LI> 
+  <LI><A title="vb.net" 
+  href="http://www.jb51.net/list/list_205_1.htm">vb.net</A></LI> 
+  <LI><A title="C 语言" href="http://www.jb51.net/list/list_159_1.htm">C 
+  语言</A></LI> 
+  <LI><A title="Java编程" 
+  href="http://www.jb51.net/list/list_134_1.htm">Java编程</A></LI> 
+  <LI><A title="Delphi" 
+  href="http://www.jb51.net/list/list_206_1.htm">Delphi</A></LI> 
+  <LI><A title="java" 
+  href="http://www.jb51.net/list/list_207_1.htm">java</A></LI> 
+  <LI><A title="Android" 
+  href="http://www.jb51.net/list/list_233_1.htm">Android</A></LI> 
+  <LI><A title="IOS" href="http://www.jb51.net/list/list_238_1.htm">IOS</A></LI> 
+  <LI><A title="Swift" 
+  href="http://www.jb51.net/list/list_244_1.htm">Swift</A></LI> 
+  <LI><A title="Scala" 
+  href="http://www.jb51.net/list/list_250_1.htm">Scala</A></LI> 
+  <LI><A title="其它相关" 
+  href="http://www.jb51.net/list/list_188_1.htm">其它相关</A></LI> </UL></DIV>
+<DIV class="NavBar clearfix ptb10">
+<DIV class="fl w690">
+<DIV class="box mb15 mt10"><I class="icon"></I>您的位置：<A href="http://www.jb51.net/">首页</A> 
+→ <A title="软件编程" href="http://www.jb51.net/list/index_84.htm">软件编程</A> → <A 
+title="C 语言" href="http://www.jb51.net/list/list_159_1.htm">C 语言</A> → 正文内容 
+单链表</DIV></DIV>
+<DIV class="fr w300">
+<DIV class="search">
+<FORM action="http://so.jb51.net/cse/search" 
+target="_blank"><INPUT name="s" type="hidden" value="10520733385329581432">     
+<INPUT name="ie" type="hidden" value="gbk">     <INPUT name="q" class="key_input" type="text"> 
+    <INPUT class="c_btn" type="submit" value="搜索"> 
+</FORM></DIV></DIV></DIV></DIV><!--head End --> 
+<DIV class="main mb10 clearfix">
+<DIV class="tonglanad clearfix" id="tonglanbd">
+<SCRIPT type="text/javascript">dy("tonglanbd")</SCRIPT>
+</DIV>
+<DIV class="blank5 clearfix"></DIV>
+<DIV class="clearfix mt10" id="tonglan1"></DIV></DIV><!--content Star --> 
+<DIV id="contents">
+<DIV class="main clearfix">
+<DIV class="w690 fl">
+<DIV class="article-content border">
+<DIV class="title">
+<H1 class="YaHei">浅析C++中单链表的增、删、改、减</H1>
+<P>作者：  字体：[<A href="javascript:turnbig()">增加</A> <A href="javascript:turnsmall()">减小</A>] 
+类型：转载 时间：2013-09-02<A 
+href="http://www.jb51.net/article/41044.htm#comments">我要评论</A></P></DIV>
+<DIV class="art_desc mt10">
+<DIV id="art_demo">以下是对C++中单链表的增、删、改、减进行了详细的介绍，需要的朋友可以过来参考下</DIV></DIV>
+<DIV class="lbd clearfix" id="bdctop">
+<SCRIPT type="text/javascript">dy("art_up")</SCRIPT>
+</DIV>
+<DIV id="content">首先是是一个简单的例子，单链表的建立和输出。<BR><STRONG>程序1.1<BR></STRONG>
+<DIV class="codetitle"><SPAN><A class="copybut" id="copybut98014" style="cursor: pointer;" 
+onclick="doCopy('code98014')" data="98014"><U>复制代码</U></A></SPAN> 代码如下:</DIV>
+<DIV class="codebody" 
+id="code98014"><BR>#include&lt;iostream&gt;<BR>#include&lt;string&gt;<BR>using 
+namespace std;<BR>struct Student{<BR>&nbsp;string name;<BR>&nbsp;string 
+score;<BR>&nbsp;Student *next;//定义了指向Candidate类型变量的指针<BR>};<BR>int 
+main(){<BR>&nbsp;int 
+n;//<BR>&nbsp;cout&lt;&lt;"请输入学生的总数：";<BR>&nbsp;cin&gt;&gt;n;<BR>&nbsp;int 
+i=1;<BR>&nbsp;Student *p=NULL;<BR>&nbsp;Student *node=NULL;<BR>&nbsp;Student 
+*head=NULL;<BR>&nbsp;//建立链表<BR>&nbsp;for(;i&lt;=n;i++){<BR>&nbsp;&nbsp;node=new 
+Student;<BR>&nbsp;&nbsp;cout&lt;&lt;"请输入第"&lt;&lt;i&lt;&lt;"个同学的姓名:";<BR>&nbsp;&nbsp;cin&gt;&gt;node-&gt;name;<BR>&nbsp;&nbsp;cout&lt;&lt;"请输入第"&lt;&lt;i&lt;&lt;"个同学的成绩:";<BR>&nbsp;&nbsp;cin&gt;&gt;node-&gt;score;<BR>&nbsp;&nbsp;if(head==NULL)<BR>&nbsp;&nbsp;&nbsp;head=node;<BR>&nbsp;&nbsp;else<BR>&nbsp;&nbsp;&nbsp;p-&gt;next=node;<BR>&nbsp;&nbsp;p=node;<BR>&nbsp;&nbsp;if(i==n){<BR>&nbsp;&nbsp;&nbsp;p-&gt;next=NULL;<BR>&nbsp;&nbsp;}<BR>&nbsp;}<BR>&nbsp;//输出链表<BR>&nbsp;p=head;<BR>&nbsp;cout&lt;&lt;"链表已经建立!"&lt;&lt;endl;<BR>&nbsp;cout&lt;&lt;"\n==========下面输入刚才的数据=============\n"&lt;&lt;endl;<BR>&nbsp;i=1;<BR>&nbsp;while(p!=NULL){<BR>&nbsp;&nbsp;cout&lt;&lt;"第"&lt;&lt;i&lt;&lt;"个同学==="&lt;&lt;p-&gt;name&lt;&lt;"==成绩===="&lt;&lt;p-&gt;score&lt;&lt;endl;<BR>&nbsp;&nbsp;p=p-&gt;next;<BR>&nbsp;&nbsp;i++;<BR>&nbsp;}<BR>&nbsp;//销毁链表<BR>&nbsp;Student 
+*d;<BR>&nbsp;p=head;<BR>&nbsp;while(p!=NULL){<BR>&nbsp;&nbsp;d=p;<BR>&nbsp;&nbsp;p=p-&gt;next;<BR>&nbsp;&nbsp;delete 
+d;<BR>&nbsp;}<BR>&nbsp;return 0;<BR>}<BR></DIV><BR><IMG alt="" src="浅析C++中单链表的增、删、改、减_C%20语言_脚本之家_files/201309020851293.jpg"><BR><BR>在程序1.1中，我们已经建立了一个链表。然后，我们在小樱和鸣人之间插入一个佐井同学的成绩<BR>
+<DIV class="codetitle"><SPAN><A class="copybut" id="copybut89728" style="cursor: pointer;" 
+onclick="doCopy('code89728')" data="89728"><U>复制代码</U></A></SPAN> 代码如下:</DIV>
+<DIV class="codebody" 
+id="code89728"><BR>#include&lt;iostream&gt;<BR>#include&lt;string&gt;<BR>using 
+namespace std;<BR>struct Student{<BR>&nbsp;string name;<BR>&nbsp;string 
+score;<BR>&nbsp;Student *next;//定义了指向Candidate类型变量的指针<BR>};<BR>Student * 
+Create(Student * head){<BR>&nbsp;Student *p=NULL;<BR>&nbsp;Student 
+*node=NULL;<BR>&nbsp;int 
+n;//<BR>&nbsp;cout&lt;&lt;"请输入学生的总数：";<BR>&nbsp;cin&gt;&gt;n;<BR>&nbsp;for(int 
+i=1;i&lt;=n;i++){<BR>&nbsp;&nbsp;node=new 
+Student;<BR>&nbsp;&nbsp;cout&lt;&lt;"请输入第"&lt;&lt;i&lt;&lt;"个同学的姓名:";<BR>&nbsp;&nbsp;cin&gt;&gt;node-&gt;name;<BR>&nbsp;&nbsp;cout&lt;&lt;"请输入第"&lt;&lt;i&lt;&lt;"个同学的成绩:";<BR>&nbsp;&nbsp;cin&gt;&gt;node-&gt;score;<BR>&nbsp;&nbsp;if(head==NULL)<BR>&nbsp;&nbsp;&nbsp;head=node;<BR>&nbsp;&nbsp;else<BR>&nbsp;&nbsp;&nbsp;p-&gt;next=node;<BR>&nbsp;&nbsp;p=node;<BR>&nbsp;&nbsp;if(i==n){<BR>&nbsp;&nbsp;&nbsp;p-&gt;next=NULL;<BR>&nbsp;&nbsp;}<BR>&nbsp;}<BR>&nbsp;return 
+head;<BR>}<BR>void Print(Student * head){<BR>&nbsp;Student 
+*p=NULL;<BR>&nbsp;p=head;<BR>&nbsp;cout&lt;&lt;"链表已经建立!"&lt;&lt;endl;<BR>&nbsp;cout&lt;&lt;"\n==========下面输入刚才的数据=============\n"&lt;&lt;endl;<BR>&nbsp;int 
+i=1;<BR>&nbsp;while(p!=NULL){<BR>&nbsp;&nbsp;cout&lt;&lt;"第"&lt;&lt;i&lt;&lt;"个同学==="&lt;&lt;p-&gt;name&lt;&lt;"==成绩===="&lt;&lt;p-&gt;score&lt;&lt;endl;<BR>&nbsp;&nbsp;p=p-&gt;next;<BR>&nbsp;&nbsp;i++;<BR>&nbsp;}<BR>&nbsp;cout&lt;&lt;"\n"&lt;&lt;endl;<BR>}<BR>void 
+Insert(Student * head,int k){<BR>&nbsp;Student *p=NULL;<BR>&nbsp;Student 
+*node=NULL;<BR>&nbsp;p=head;<BR>&nbsp;int 
+i=1;<BR>&nbsp;while(p!=NULL){<BR>&nbsp;&nbsp;if(i+1==k){<BR>&nbsp;&nbsp;&nbsp;node=new 
+Student;<BR>&nbsp;&nbsp;&nbsp;cout&lt;&lt;"第"&lt;&lt;k&lt;&lt;"位同学的名字：";<BR>&nbsp;&nbsp;&nbsp;cin&gt;&gt;node-&gt;name;<BR>&nbsp;&nbsp;&nbsp;cout&lt;&lt;"第"&lt;&lt;k&lt;&lt;"位同学的成绩：";<BR>&nbsp;&nbsp;&nbsp;cin&gt;&gt;node-&gt;score;<BR>&nbsp;&nbsp;&nbsp;node-&gt;next=p-&gt;next;<BR>&nbsp;&nbsp;&nbsp;p-&gt;next=node;<BR>&nbsp;&nbsp;}<BR>&nbsp;&nbsp;p=p-&gt;next;<BR>&nbsp;&nbsp;i++;<BR>&nbsp;}<BR>}<BR><BR>void 
+Destory(Student * head){<BR>&nbsp;&nbsp;&nbsp; Student *d;<BR>&nbsp;Student 
+*p=NULL;<BR>&nbsp;p=head;<BR>&nbsp;while(p!=NULL){<BR>&nbsp;&nbsp;d=p;<BR>&nbsp;&nbsp;p=p-&gt;next;<BR>&nbsp;&nbsp;delete 
+d;<BR>&nbsp;}<BR>}<BR>int main(){<BR>&nbsp;Student 
+*head=NULL;<BR>&nbsp;//创建链表<BR>&nbsp;head=Create(head);<BR>&nbsp;//输出链表<BR>&nbsp;Print(head);<BR>&nbsp;//插入数据<BR>&nbsp;int 
+k;<BR>&nbsp;cout&lt;&lt;"请输入你要插入的同学的序号：";<BR>&nbsp;cin&gt;&gt;k;<BR>&nbsp;Insert(head,k);<BR>&nbsp;//输出链表<BR>&nbsp;Print(head);<BR>&nbsp;//销毁链表<BR>&nbsp;&nbsp;&nbsp; 
+Destory(head);<BR>&nbsp;return 0;<BR>}<BR></DIV><BR><IMG alt="" src="浅析C++中单链表的增、删、改、减_C%20语言_脚本之家_files/201309020851294.jpg"><BR><BR>现在，佐井同学的成绩已经插入。<BR>但是，卡卡西老师发现，鸣人的成绩抄错了，实际上是100，需要修改成绩；然后，佐助同学辍学了，所以，还要删除他的成绩。<BR>
+<DIV class="codetitle"><SPAN><A class="copybut" id="copybut67702" style="cursor: pointer;" 
+onclick="doCopy('code67702')" data="67702"><U>复制代码</U></A></SPAN> 代码如下:</DIV>
+<DIV class="codebody" 
+id="code67702"><BR>#include&lt;iostream&gt;<BR>#include&lt;string&gt;<BR>using 
+namespace std;<BR>struct Student{<BR>&nbsp;string name;<BR>&nbsp;string 
+score;<BR>&nbsp;Student *next;//定义了指向Candidate类型变量的指针<BR>};<BR>Student * 
+Create(Student * head){<BR>&nbsp;Student *p=NULL;<BR>&nbsp;Student 
+*node=NULL;<BR>&nbsp;int 
+n;//<BR>&nbsp;cout&lt;&lt;"请输入学生的总数：";<BR>&nbsp;cin&gt;&gt;n;<BR>&nbsp;for(int 
+i=1;i&lt;=n;i++){<BR>&nbsp;&nbsp;node=new 
+Student;<BR>&nbsp;&nbsp;cout&lt;&lt;"请输入第"&lt;&lt;i&lt;&lt;"个同学的姓名:";<BR>&nbsp;&nbsp;cin&gt;&gt;node-&gt;name;<BR>&nbsp;&nbsp;cout&lt;&lt;"请输入第"&lt;&lt;i&lt;&lt;"个同学的成绩:";<BR>&nbsp;&nbsp;cin&gt;&gt;node-&gt;score;<BR>&nbsp;&nbsp;if(head==NULL)<BR>&nbsp;&nbsp;&nbsp;head=node;<BR>&nbsp;&nbsp;else<BR>&nbsp;&nbsp;&nbsp;p-&gt;next=node;<BR>&nbsp;&nbsp;p=node;<BR>&nbsp;&nbsp;if(i==n){<BR>&nbsp;&nbsp;&nbsp;p-&gt;next=NULL;<BR>&nbsp;&nbsp;}<BR>&nbsp;}<BR>&nbsp;return 
+head;<BR>}<BR>void Print(Student * head){<BR>&nbsp;Student 
+*p=NULL;<BR>&nbsp;p=head;<BR>&nbsp;cout&lt;&lt;"链表已经建立!"&lt;&lt;endl;<BR>&nbsp;cout&lt;&lt;"\n==========下面输入刚才的数据=============\n"&lt;&lt;endl;<BR>&nbsp;int 
+i=1;<BR>&nbsp;while(p!=NULL){<BR>&nbsp;&nbsp;cout&lt;&lt;"第"&lt;&lt;i&lt;&lt;"个同学==="&lt;&lt;p-&gt;name&lt;&lt;"==成绩===="&lt;&lt;p-&gt;score&lt;&lt;endl;<BR>&nbsp;&nbsp;p=p-&gt;next;<BR>&nbsp;&nbsp;i++;<BR>&nbsp;}<BR>&nbsp;cout&lt;&lt;"\n"&lt;&lt;endl;<BR>}<BR>void 
+Insert(Student * head,int k){<BR>&nbsp;Student *p=NULL;<BR>&nbsp;Student 
+*node=NULL;<BR>&nbsp;p=head;<BR>&nbsp;if(k==1){<BR>&nbsp;&nbsp;&nbsp;node=new 
+Student;<BR>&nbsp;&nbsp;&nbsp;cout&lt;&lt;"第1位同学的名字：";<BR>&nbsp;&nbsp;&nbsp;cin&gt;&gt;node-&gt;name;<BR>&nbsp;&nbsp;&nbsp;cout&lt;&lt;"第1位同学的成绩：";<BR>&nbsp;&nbsp;&nbsp;cin&gt;&gt;node-&gt;score;<BR>&nbsp;&nbsp;&nbsp;node-&gt;next=head-&gt;next;<BR>&nbsp;&nbsp;&nbsp;head=node;<BR>&nbsp;}<BR>&nbsp;int 
+i=1;<BR>&nbsp;while(p!=NULL){<BR>&nbsp;&nbsp;if(i+1==k){<BR>&nbsp;&nbsp;&nbsp;node=new 
+Student;<BR>&nbsp;&nbsp;&nbsp;cout&lt;&lt;"第"&lt;&lt;k&lt;&lt;"位同学的名字：";<BR>&nbsp;&nbsp;&nbsp;cin&gt;&gt;node-&gt;name;<BR>&nbsp;&nbsp;&nbsp;cout&lt;&lt;"第"&lt;&lt;k&lt;&lt;"位同学的成绩：";<BR>&nbsp;&nbsp;&nbsp;cin&gt;&gt;node-&gt;score;<BR>&nbsp;&nbsp;&nbsp;node-&gt;next=p-&gt;next;<BR>&nbsp;&nbsp;&nbsp;p-&gt;next=node;<BR>&nbsp;&nbsp;}<BR>&nbsp;&nbsp;p=p-&gt;next;<BR>&nbsp;&nbsp;i++;<BR>&nbsp;}<BR>}<BR><BR>void 
+Destory(Student * head){<BR>&nbsp;&nbsp;&nbsp; Student *d;<BR>&nbsp;Student 
+*p=NULL;<BR>&nbsp;p=head;<BR>&nbsp;while(p!=NULL){<BR>&nbsp;&nbsp;d=p;<BR>&nbsp;&nbsp;p=p-&gt;next;<BR>&nbsp;&nbsp;delete 
+d;<BR>&nbsp;}<BR>}<BR>void Alter(Student * head,int k){<BR>&nbsp;int 
+i=1;<BR>&nbsp;Student 
+*p=head;<BR>&nbsp;while(p!=NULL){<BR>&nbsp;&nbsp;if(i==k){<BR>&nbsp;&nbsp;&nbsp;cout&lt;&lt;"第"&lt;&lt;k&lt;&lt;"位同学的名字：";<BR>&nbsp;&nbsp;&nbsp;cin&gt;&gt;p-&gt;name;<BR>&nbsp;&nbsp;&nbsp;cout&lt;&lt;"第"&lt;&lt;k&lt;&lt;"位同学的成绩：";<BR>&nbsp;&nbsp;&nbsp;cin&gt;&gt;p-&gt;score;<BR>&nbsp;&nbsp;}<BR>&nbsp;&nbsp;p=p-&gt;next;<BR>&nbsp;&nbsp;i++;<BR>&nbsp;}<BR>}<BR>Student 
+* Delete(Student * head,int k){<BR>&nbsp;int i=1;<BR>&nbsp;Student 
+*p=head;<BR>&nbsp;Student 
+*d=head;<BR>&nbsp;if(k==1){<BR>&nbsp;&nbsp;head=head-&gt;next;<BR>&nbsp;}else{<BR>&nbsp;&nbsp;while(p!=NULL){<BR>&nbsp;&nbsp;&nbsp;if(i+1==k){<BR>&nbsp;&nbsp;&nbsp;&nbsp;p-&gt;next=p-&gt;next-&gt;next;<BR>&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;p=p-&gt;next;<BR>&nbsp;&nbsp;&nbsp;i++;<BR>&nbsp;&nbsp;}<BR>&nbsp;}<BR>&nbsp;return 
+head;<BR>}<BR>int main(){<BR>&nbsp;Student 
+*head=NULL;<BR>&nbsp;//创建链表<BR>&nbsp;head=Create(head);<BR>&nbsp;//输出链表<BR>&nbsp;Print(head);<BR>&nbsp;//插入数据<BR>&nbsp;int 
+k;<BR>&nbsp;cout&lt;&lt;"请输入你要插入的同学的序号：";<BR>&nbsp;cin&gt;&gt;k;<BR>&nbsp;Insert(head,k);<BR>&nbsp;//输出链表<BR>&nbsp;Print(head);<BR>&nbsp;//修改链表<BR>&nbsp;cout&lt;&lt;"请输入你要修改的同学的序号:";<BR>&nbsp;cin&gt;&gt;k;<BR>&nbsp;Alter(head,k);<BR>&nbsp;//输出链表<BR>&nbsp;Print(head);<BR>&nbsp;//删除其中的一个项<BR>&nbsp;cout&lt;&lt;"请输入你要删除的同学的序号:";<BR>&nbsp;cin&gt;&gt;k;<BR>&nbsp;head=Delete(head,k);&nbsp;<BR>&nbsp;//输出链表<BR>&nbsp;Print(head);<BR>&nbsp;//销毁链表<BR>&nbsp;&nbsp;&nbsp; 
+Destory(head);<BR>&nbsp;return 0;<BR>}<BR></DIV><BR><IMG alt="" 
+src=""><BR><BR><IMG alt="" src=""> </DIV><!--endmain--> 
+<DIV class="art_xg">
+<H4>您可能感兴趣的文章:</H4>
+<UL>
+  <LI><A title="C++语言实现线性表之数组实例" href="http://www.jb51.net/article/64419.htm" 
+  target="_blank">C++语言实现线性表之数组实例</A></LI>
+  <LI><A title="C语言线性表的顺序表示与实现实例详解" href="http://www.jb51.net/article/51959.htm" 
+  target="_blank">C语言线性表的顺序表示与实现实例详解</A></LI>
+  <LI><A title="C++循环链表之约瑟夫环的实现方法" href="http://www.jb51.net/article/54655.htm" 
+  target="_blank">C++循环链表之约瑟夫环的实现方法</A></LI>
+  <LI><A title="C++链表倒序实现方法" href="http://www.jb51.net/article/53959.htm" 
+  target="_blank">C++链表倒序实现方法</A></LI>
+  <LI><A title="C++中单链表的建立与基本操作" href="http://www.jb51.net/article/42071.htm" 
+  target="_blank">C++中单链表的建立与基本操作</A></LI>
+  <LI><A title="C++ 模版双向链表的实现详解" href="http://www.jb51.net/article/37646.htm" 
+  target="_blank">C++ 模版双向链表的实现详解</A></LI>
+  <LI><A title="C++ 构造双向链表的实现代码" href="http://www.jb51.net/article/37553.htm" 
+  target="_blank">C++ 构造双向链表的实现代码</A></LI>
+  <LI><A title="C++语言实现线性表之链表实例" href="http://www.jb51.net/article/64421.htm" 
+  target="_blank">C++语言实现线性表之链表实例</A></LI></UL></DIV>
+<DIV class="lbd clearfix" id="bot_ad">
+<SCRIPT type="text/javascript">
+var cpro_id="u776243";
+(window["cproStyleApi"] = window["cproStyleApi"] || {})[cpro_id]={at:"3",rsi0:"650",rsi1:"250",pat:"1",tn:"baiduCustNativeAD",rss1:"#FFFFFF",conBW:"0",adp:"1",ptt:"0",titFF:"%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91",titFS:"14",rss2:"#000000",titSU:"0",tft:"0",tlt:"1",ptbg:"90",piw:"0",pih:"0",ptp:"0"}
+</SCRIPT>
+ 
+<SCRIPT src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></SCRIPT>
+ </DIV>
+<DIV id="shoucang">
+<DIV class="bdsharebuttonbox"><A class="bds_more" href="http://share.baidu.com/code#" 
+data-cmd="more"></A><A title="分享到QQ空间" class="bds_qzone" href="http://share.baidu.com/code#" 
+data-cmd="qzone"></A><A title="分享到新浪微博" class="bds_tsina" href="http://share.baidu.com/code#" 
+data-cmd="tsina"></A><A title="分享到腾讯微博" class="bds_tqq" href="http://share.baidu.com/code#" 
+data-cmd="tqq"></A><A title="分享到人人网" class="bds_renren" href="http://share.baidu.com/code#" 
+data-cmd="renren"></A><A title="分享到微信" class="bds_weixin" href="http://share.baidu.com/code#" 
+data-cmd="weixin"></A></DIV></DIV>
+<DIV class="tags mt10"><STRONG>Tags：</STRONG><A title="搜索关于单链表的文章" href="http://img.jb51.net/tag/%B5%A5%C1%B4%B1%ED/1.htm" 
+target="_blank">单链表</A> <A title="搜索关于C++的文章" href="http://img.jb51.net/tag/C%2B%2B/1.htm" 
+target="_blank">C++</A> </DIV>
+<DIV class="relatedarticle clearfix mt5">
+<H2>相关文章</H2>
+<UL>
+  <LI><SPAN>2015-05-05</SPAN><A title="C++中COM组件初始化方法实例分析" href="http://www.jb51.net/article/66692.htm" 
+  target="_blank">C++中COM组件初始化方法实例分析</A></LI>
+  <LI><SPAN>2013-05-05</SPAN><A title="基于稀疏图上的Johnson算法的详解" href="http://www.jb51.net/article/36394.htm" 
+  target="_blank">基于稀疏图上的Johnson算法的详解</A></LI>
+  <LI><SPAN>2013-07-07</SPAN><A title="C语言小程序 计算第二天日期示例代码" href="http://www.jb51.net/article/39908.htm" 
+  target="_blank">C语言小程序 计算第二天日期示例代码</A></LI>
+  <LI><SPAN>2015-08-08</SPAN><A title="利用C语言来求最大连续子序列乘积的方法" href="http://www.jb51.net/article/70913.htm" 
+  target="_blank">利用C语言来求最大连续子序列乘积的方法</A></LI>
+  <LI><SPAN>2015-10-10</SPAN><A title="VC实现Windows多显示器编程的方法" href="http://www.jb51.net/article/73194.htm" 
+  target="_blank">VC实现Windows多显示器编程的方法</A></LI>
+  <LI><SPAN>2015-07-07</SPAN><A title="模拟实现C语言中的内存管理" href="http://www.jb51.net/article/70369.htm" 
+  target="_blank">模拟实现C语言中的内存管理</A></LI>
+  <LI><SPAN>2013-05-05</SPAN><A title="基于John Carmark密码详解" href="http://www.jb51.net/article/36463.htm" 
+  target="_blank">基于John Carmark密码详解</A></LI>
+  <LI><SPAN>2013-05-05</SPAN><A title="用代码和UML图化解设计模式之桥接模式的深入分析" href="http://www.jb51.net/article/37667.htm" 
+  target="_blank">用代码和UML图化解设计模式之桥接模式的深入分析</A></LI>
+  <LI><SPAN>2014-08-08</SPAN><A title="算法之排列算法与组合算法详解" href="http://www.jb51.net/article/54444.htm" 
+  target="_blank">算法之排列算法与组合算法详解</A></LI>
+  <LI><SPAN>2014-09-09</SPAN><A title="C语言kmp算法简单示例和实现原理探究" href="http://www.jb51.net/article/55569.htm" 
+  target="_blank">C语言kmp算法简单示例和实现原理探究</A></LI></UL></DIV>
+<DIV class="lbd clearfix mt5">
+<SCRIPT type="text/javascript">
+var cpro_id="u2261530";
+(window["cproStyleApi"] = window["cproStyleApi"] || {})[cpro_id]={at:"3",rsi0:"680",rsi1:"200",pat:"6",tn:"baiduCustNativeAD",rss1:"#FFFFFF",conBW:"1",adp:"1",ptt:"0",titFF:"%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91",titFS:"14",rss2:"#000000",titSU:"0",ptbg:"90",piw:"0",pih:"0",ptp:"0"}
+</SCRIPT>
+ 
+<SCRIPT src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></SCRIPT>
+ </DIV><A href="http://www.jb51.net/article/41044.htm#comments"></A> 
+<DIV id="comments">
+<DIV id="SOHUCS" sid="art_41044"></DIV></DIV></DIV><!--endborder-->       </DIV><!--end fl--> 
+      
+<DIV class="w300 fr">
+<DIV class="r300 clearfix" id="r1"></DIV>
+<DIV class="tabTitleBar mt10 bgf borderTblue">
+<DIV class="borderTnone pb10 YaHei">
+<H4 class="blue">大家感兴趣的内容</H4>
+<UL class="newsList newList-in">
+  <LI><EM class="no1">1</EM><A title="c语言10个经典小程序" href="http://www.jb51.net/article/33654.htm" 
+  target="_blank">c语言10个经典小程序</A></LI>
+  <LI><EM class="no2">2</EM><A title="C语言字符串操作总结大全(超详细)" href="http://www.jb51.net/article/37410.htm" 
+  target="_blank">C语言字符串操作总结大全(超详细</A></LI>
+  <LI><EM class="no3">3</EM><A title="C语言程序设计50例(经典收藏)" href="http://www.jb51.net/article/38051.htm" 
+  target="_blank">C语言程序设计50例(经典收藏)</A></LI>
+  <LI><EM class="no4">4</EM><A title="c语言字符数组与字符串的使用详解" href="http://www.jb51.net/article/37456.htm" 
+  target="_blank">c语言字符数组与字符串的使用详解</A></LI>
+  <LI><EM class="no5">5</EM><A title="C语言文件操作函数大全(超详细)" href="http://www.jb51.net/article/37688.htm" 
+  target="_blank">C语言文件操作函数大全(超详细)</A></LI>
+  <LI><EM class="no6">6</EM><A title="C语言运算符优先级列表(超详细)" href="http://www.jb51.net/article/37282.htm" 
+  target="_blank">C语言运算符优先级列表(超详细)</A></LI>
+  <LI><EM class="no7">7</EM><A title="C语言/C++中如何产生随机数" href="http://www.jb51.net/article/42065.htm" 
+  target="_blank">C语言/C++中如何产生随机数</A></LI>
+  <LI><EM class="no8">8</EM><A title="c语言连接mysql数据库的实现方法" href="http://www.jb51.net/article/30236.htm" 
+  target="_blank">c语言连接mysql数据库的实现方法</A></LI>
+  <LI><EM class="no9">9</EM><A title="fatal error LNK1104: 无法打开文件“libc.lib”的解决方法" 
+  href="http://www.jb51.net/article/37319.htm" target="_blank">fatal error 
+  LNK1104: 无法打开文</A></LI>
+  <LI><EM class="no10">10</EM><A title="string,CString,char*之间的转化" href="http://www.jb51.net/article/35127.htm" 
+  target="_blank">string,CString,char*之间的转化</A></LI></UL></DIV></DIV>
+<DIV class="r300 clearfix mt10" id="r2"></DIV>
+<DIV class="tabTitleBar mt10 bgf borderTblue">
+<DIV class="borderTnone pb10 YaHei">
+<H4 class="blue">最近更新的内容</H4>
+<UL class="newsListA">
+  <UL>
+    <LI><A title="基于VC实现的网络监听功能程序实例" href="http://www.jb51.net/article/52781.htm" 
+    target="_blank">基于VC实现的网络监听功能程序实例</A></LI>
+    <LI><A title="在C++中自定义宏的简单方法" href="http://www.jb51.net/article/69464.htm" 
+    target="_blank">在C++中自定义宏的简单方法</A></LI>
+    <LI><A title="C++通过自定义函数找出一个整数数组中第二大数的方法" href="http://www.jb51.net/article/67082.htm" 
+    target="_blank">C++通过自定义函数找出一个整数数组中第二</A></LI>
+    <LI><A title="详谈signed 关键字" href="http://www.jb51.net/article/60136.htm" 
+    target="_blank">详谈signed 关键字</A></LI>
+    <LI><A title="关于C++中的友元函数的一些总结" href="http://www.jb51.net/article/41640.htm" 
+    target="_blank">关于C++中的友元函数的一些总结</A></LI>
+    <LI><A title="C++基于hook iat改变Messagebox实例" href="http://www.jb51.net/article/56345.htm" 
+    target="_blank">C++基于hook iat改变Messagebox实例</A></LI>
+    <LI><A title="解析VC中创建DLL,导出全局变量,函数和类的深入分析" href="http://www.jb51.net/article/36973.htm" 
+    target="_blank">解析VC中创建DLL,导出全局变量,函数和类的</A></LI>
+    <LI><A title="深入学习C语言中的函数指针和左右法则" href="http://www.jb51.net/article/70827.htm" 
+    target="_blank">深入学习C语言中的函数指针和左右法则</A></LI>
+    <LI><A title="详解C++编程中类的成员变量和成员函数的相关知识" href="http://www.jb51.net/article/72321.htm" 
+    target="_blank">详解C++编程中类的成员变量和成员函数的相</A></LI>
+    <LI><A title="判断机器大小端的两种实现方法" href="http://www.jb51.net/article/34446.htm" 
+    target="_blank">判断机器大小端的两种实现方法</A></LI></UL></UL></DIV></DIV>
+<DIV class="r300 clearfix mt10" id="idctu1"></DIV>
+<DIV class="tabTitleBar mt10 bgf borderTblue">
+<DIV class="borderTnone pb10 YaHei">
+<H4 class="blue">常用在线小工具</H4>
+<UL class="newsListA" id="bctools"></UL></DIV></DIV>
+<DIV class="r300 clearfix mt10" id="idctu2"></DIV>
+<DIV class="r300 clearfix mt10" id="r3">
+<SCRIPT type="text/javascript">
+var cpro_id="u1397867";
+</SCRIPT>
+ 
+<SCRIPT src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></SCRIPT>
+ </DIV></DIV><!--end fr-->       </DIV></DIV><!--end content--> 
+<DIV id="footer">
+<DIV class="main">
+<P><A href="http://www.jb51.net/about.htm" target="_blank">关于我们</A> -  <A href="http://www.jb51.net/support.htm" 
+target="_blank">广告合作</A> -  <A href="http://www.jb51.net/linkus.htm" target="_blank">联系我们</A> 
+-   <A href="http://www.jb51.net/sm.htm" target="_blank">免责声明</A> -   <A href="http://www.jb51.net/sitemap.htm" 
+target="_blank">网站地图</A> -  <A href="tencent://message/?uin=461478385&amp;Site=http://www.jb51.net" 
+target="_blank">投诉建议</A> -  <A href="http://www.jb51.net/up.htm" 
+target="_blank">在线投稿</A> </P>
+<P>&copy;CopyRight 2006-2016 JB51.Net Inc All Rights Reserved. 脚本之家 
+版权所有</P></DIV></DIV><!--end footer--> <LINK href="浅析C++中单链表的增、删、改、减_C%20语言_脚本之家_files/shCore.css" 
+rel="stylesheet" type="text/css"> <LINK href="浅析C++中单链表的增、删、改、减_C%20语言_脚本之家_files/shThemeDefault.css" 
+rel="Stylesheet" type="text/css"> 
+<SCRIPT src="/jslib/syntaxhighlighter/scripts/shCore.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="/jslib/syntaxhighlighter/scripts/shAutoloader.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT type="text/javascript"> 
+if (top.location != self.location)top.location=self.location;
+$('#content').find('img').each(function(){
+        var img = this;
+        if (img.width >= 650){
+            img.style.width = "650px";
+            img.style.height = "auto";
+            //$(img).removeAttr('height');
+            var aTag = document.createElement('a');
+            aTag.href = img.src;
+			aTag.target="_blank";
+            $(aTag).addClass('bPic')
+            .insertAfter(img).append(img)
+          }
+    });
+SyntaxHighlighter.autoloader(
+	'applescript			/jslib/syntaxhighlighter/scripts/shBrushAppleScript.js',
+	'actionscript3 as3		/jslib/syntaxhighlighter/scripts/shBrushAS3.js',
+	'bash shell				/jslib/syntaxhighlighter/scripts/shBrushBash.js',
+	'coldfusion cf			/jslib/syntaxhighlighter/scripts/shBrushColdFusion.js',
+	'cpp c					/jslib/syntaxhighlighter/scripts/shBrushCpp.js',
+	'obj-c objc				/jslib/syntaxhighlighter/scripts/shBrushObjC.js',
+	'c# c-sharp csharp		/jslib/syntaxhighlighter/scripts/shBrushCSharp.js',
+	'css					/jslib/syntaxhighlighter/scripts/shBrushCss.js',
+	'delphi pascal			/jslib/syntaxhighlighter/scripts/shBrushDelphi.js',
+	'diff patch pas			/jslib/syntaxhighlighter/scripts/shBrushDiff.js',
+	'erl erlang				/jslib/syntaxhighlighter/scripts/shBrushErlang.js',
+	'groovy					/jslib/syntaxhighlighter/scripts/shBrushGroovy.js',
+	'haxe hx				/jslib/syntaxhighlighter/scripts/shBrushHaxe.js',
+	'java					/jslib/syntaxhighlighter/scripts/shBrushJava.js',
+	'jfx javafx				/jslib/syntaxhighlighter/scripts/shBrushJavaFX.js',
+	'js jscript javascript	/jslib/syntaxhighlighter/scripts/shBrushJScript.js',
+	'perl pl				/jslib/syntaxhighlighter/scripts/shBrushPerl.js',
+	'php					/jslib/syntaxhighlighter/scripts/shBrushPhp.js',
+	'text plain				/jslib/syntaxhighlighter/scripts/shBrushPlain.js',
+	'py python				/jslib/syntaxhighlighter/scripts/shBrushPython.js',
+	'ruby rails ror rb		/jslib/syntaxhighlighter/scripts/shBrushRuby.js',
+	'scala					/jslib/syntaxhighlighter/scripts/shBrushScala.js',
+	'sql					/jslib/syntaxhighlighter/scripts/shBrushSql.js',
+	'vb vbnet				/jslib/syntaxhighlighter/scripts/shBrushVb.js',
+	'ps powershell			/jslib/syntaxhighlighter/scripts/shBrushPowerShell.js',
+	'xml xhtml xslt html	/jslib/syntaxhighlighter/scripts/shBrushXml.js'
+);
+SyntaxHighlighter.all();
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</SCRIPT>
+ 
+<SCRIPT src="http://img.jb51.net/js/a.js" type="text/javascript"></SCRIPT>
+ 
+<DIV id="tongji">
+<SCRIPT src="http://img.jb51.net/inc/tongji.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="http://www.jb51.net/pl.asp?id=41044" type="text/javascript"></SCRIPT>
+ </DIV>
+<SCRIPT>
+(function(){
+var appid = 'cyrHH3dwi',
+conf = 'prod_1dc5dc80970106099d43fe242b7465fc';
+var doc = document,
+s = doc.createElement('script'),
+h = doc.getElementsByTagName('head')[0] || doc.head || doc.documentElement;
+s.type = 'text/javascript';
+s.charset = 'utf-8';
+s.src =  'http://assets.changyan.sohu.com/upload/changyan.js?conf='+ conf +'&appid=' + appid;
+h.insertBefore(s,h.firstChild);
+window.SCS_NO_IFRAME = true;
+})();
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</SCRIPT>
+ 
+<SCRIPT src="http://changyan.itc.cn/js/??lib/jquery.js,changyan.labs.js?appid=cyrEjJlIw" type="text/javascript" charset="utf-8"></SCRIPT>
+ </DIV></BODY></HTML><!-- published at 2015-12-3 0:03:32By dxycms qq:461478385  -->

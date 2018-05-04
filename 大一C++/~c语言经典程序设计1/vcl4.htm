@@ -1,0 +1,564 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>经典C程序100例</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<STYLE type=text/css>TD {
+	FONT-SIZE: 12px
+}
+P {
+	FONT-SIZE: 12px
+}
+LI {
+	FONT-SIZE: 12px
+}
+INPUT {
+	FONT-SIZE: 12px
+}
+SELECT {
+	FONT-SIZE: 12px
+}
+.C01 {
+	FONT-SIZE: 7pt; COLOR: #ffffff; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+.L13 {
+	LINE-HEIGHT: 130%
+}
+.L15 {
+	LINE-HEIGHT: 150%
+}
+.L17 {
+	LINE-HEIGHT: 170%
+}
+.F7 {
+	FONT-SIZE: 7px
+}
+.F16 {
+	FONT-SIZE: 16px
+}
+.s01 {
+	BORDER-RIGHT: 1px inset; BORDER-TOP: 1px inset; VERTICAL-ALIGN: text-bottom; BORDER-LEFT: 1px inset; BORDER-BOTTOM: 1px inset; BACKGROUND-COLOR: #ffffff
+}
+.s02 {
+	BORDER-RIGHT: 1px ridge; BORDER-TOP: #ffffff 1px ridge; BORDER-LEFT: #ffffff 1px ridge; BORDER-BOTTOM: 1px ridge; BACKGROUND-COLOR: #cccccc
+}
+A:link {
+	COLOR: #00007f
+}
+A:visited {
+	COLOR: #65038e
+}
+A:active {
+	COLOR: #ff0000
+}
+A:hover {
+	COLOR: #ff0000
+}
+A.a01:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.a01:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.a01:active {
+	COLOR: #eeeeee; TEXT-DECORATION: none
+}
+A.a01:hover {
+	COLOR: #cccccc; TEXT-DECORATION: none
+}
+A.a02:link {
+	COLOR: #0000ff
+}
+A.a02:visited {
+	COLOR: #0000ff
+}
+A.a02:active {
+	COLOR: #ff0000
+}
+A.a02:hover {
+	COLOR: #ff0000
+}
+A.a03:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.a03:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.a03:active {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+A.a03:hover {
+	COLOR: #336699; TEXT-DECORATION: none
+}
+A.a04:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.a04:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.a04:active {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+A.a04:hover {
+	COLOR: #0066cc; TEXT-DECORATION: underline
+}
+.L13 {
+	LINE-HEIGHT: 130%
+}
+</STYLE>
+
+<META content="Microsoft FrontPage 4.0" name=GENERATOR></HEAD>
+<BODY text=#000000 bgColor=#999999 leftMargin=0 background=../image/bg1.gif 
+topMargin=0 marginheight="0" marginwidth="0">
+<DIV id=floater 
+style="z-index: 25; left: -6; visibility: hidden; width: 192; position: absolute; top: 483; height: 137">
+</DIV>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 align=center border=0>
+        <TBODY>
+        <TR>
+          <TD width=288 height=74>
+            <table border="0" width="759" cellspacing="0" cellpadding="0" height="72">
+              <tr>
+    <TD align=middle bgColor=#dfe9ee height=24 width="757">
+      <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                      
+      <IMG align=absMiddle height=12 
+                  src="../../image/dot.gif" width=14> <A class=yellow                                                                           
+                  href="http://djxh.tzc.edu.cn/" 
+                  onclick='this.style.behavior="url(#default#homepage)";this.setHomePage("http://djxh.tzc.edu.cn");'>设为首页</A> 
+                  <IMG align=absMiddle height=12                                                                           
+                  src="../../image/dot.gif" width=14> <A class=yellow                                                                           
+                  href="javascript:window.external.addFavorite('http://www.djxh.tzc.edu.cn','台州学院电教协会')">加入收藏</A>  
+                  <IMG align=absMiddle height=12                                                                          
+                  src="../../image/dot.gif" width=14>  <a href="mailto:yangwj3217@163.com">联系部长</a>                                                                          
+      </p>
+ </TD>
+              </tr>
+              <tr>
+    <TD bgColor=#a5b5c5 height=1 width="757"></TD>
+              </tr>
+              <tr>
+                <td width="757" height="72">
+                  <table border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+                    <tr>
+    <TD width="144" height=70><IMG src="../image/lb1.gif" width="143" height="54"></TD>
+    <TD align=middle width="16">
+    </TD>
+    <TD width="184">&nbsp;</TD>
+    <TD width="420"><img border="0" src="../image/banner5.gif" width="589" height="64"></TD>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </TD>
+        </TR></TBODY></TABLE><!-- #EndLibraryItem --></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 border=0>
+        <TBODY>
+        <TR>
+          <TD bgColor=#000000><!-- #BeginLibraryItem "/Library/top_menu.lbi" -->
+            <TABLE cellSpacing=0 cellPadding=0 width=760 align=center 
+            bgColor=#000000 border=0>
+              <TBODY>
+              <TR align=middle>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="../../index.htm">协会首页</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="../index.htm">网络部</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="http://">电教之窗</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="../../sysx/index.htm">摄影摄像部</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff>秘书处</FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="../../dmt/index.htm">多媒体部</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><font color="#ffffff">外联部</font></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%">
+                  　</TD></TR></TBODY></TABLE><!-- #EndLibraryItem --></TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=1><IMG height=1 
+            src="../image/spacer.gif" width=1></TD></TR></TBODY></TABLE></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 border=0>
+        <TBODY>
+        <TR>
+          <TD width=54 background=../image/2005_1.gif height=70><IMG 
+            height=1 src="../image/spacer.gif" width=1></TD>
+          <TD width=63 background=../image/2005_2.gif><IMG height=1 
+            src="../image/spacer.gif" width=1></TD>
+          <TD width=49 background=../image/2005_3.gif><IMG height=1 
+            src="../image/spacer.gif" width=1></TD>
+          <TD width=42 background=../image/2005_4.gif><IMG height=1 
+            src="../image/spacer.gif" width=1></TD>
+          <TD width=77 background=../image/2005_5.gif><IMG height=1 
+            src="../image/spacer.gif" width=1></TD>
+          <TD vAlign=top bgColor=#ffffff>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD width=475 background=../image/2005_6.gif height=22><IMG 
+                  height=1 src="../image/spacer.gif" width=1></TD></TR>
+              <TR>
+                <TD bgColor=#ffffff>
+                  <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD align=right><IMG height=37 src="../image/t3.gif" 
+                        width=441></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760 bgColor=#ffffff>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 border=0 height="80">
+        <TBODY>
+        <TR>
+          <TD bgColor=#ffffff height=1 width="758" colspan="3">
+            <hr>
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=12 width="752" colspan="3">□当前页面：<a href="../index.htm">首页</a>→<a href="vcl3.htm">经典C程序100例</a>→31－40
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=56 width="752" colspan="3">
+            <p align="center"><b><font color="#FF0000" size="5">经典c程序100例==31--40</font></b>
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=56 width="93">　
+          </TD>
+          <TD bgColor=#ffffff height=112 width="568" rowspan="2">
+            <table border="0" width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="100%"><font color="#990000">【程序31】</font><br>
+                  题目：请输入星期几的第一个字母来判断一下是星期几，如果第一个字母一样，则继续<br>
+                  　　　判断第二个字母。<br>
+                  1.程序分析：用情况语句比较好，如果第一个字母一样，则判断用情况语句或if语句判断第二个字母。<br>
+                  2.程序源代码：<br>
+                  #include &lt;stdio.h&gt;<br>
+                  void main()<br>
+                  {<br>
+                  char letter;<br>
+                  printf(&quot;please input the first letter of 
+                  someday\n&quot;);<br>
+                  while ((letter=getch())!='Y')/*当所按字母为Y时才结束*/<br>
+                  { switch (letter)<br>
+                  {case 'S':printf(&quot;please input second letter\n&quot;);<br>
+                  　　　　　if((letter=getch())=='a')<br>
+                  　　　　　　printf(&quot;saturday\n&quot;);<br>
+                  　　　　　else if ((letter=getch())=='u')<br>
+                  　　　　　　　　　printf(&quot;sunday\n&quot;);<br>
+                  　　　　　　　else printf(&quot;data error\n&quot;);<br>
+                  　　　　　break;<br>
+                  case 'F':printf(&quot;friday\n&quot;);break;<br>
+                  case 'M':printf(&quot;monday\n&quot;);break;<br>
+                  case 'T':printf(&quot;please input second letter\n&quot;);<br>
+                  　　　　　if((letter=getch())=='u')<br>
+                  　　　　　　printf(&quot;tuesday\n&quot;);<br>
+                  　　　　　else if ((letter=getch())=='h')<br>
+                  　　　　　　　　　printf(&quot;thursday\n&quot;);<br>
+                  　　　　　　　else printf(&quot;data error\n&quot;);<br>
+                  　　　　　break;<br>
+                  case 'W':printf(&quot;wednesday\n&quot;);break;<br>
+                  default: printf(&quot;data error\n&quot;);<br>
+                  　　}<br>
+                  　}<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序32】</font><br>
+                  题目：Press any key to change color, do you want to try it. 
+                  Please hurry up!<br>
+                  1.程序分析：　　　　　　　　　　　　<br>
+                  2.程序源代码：<br>
+                  #include &lt;conio.h&gt;<br>
+                  void main(void)<br>
+                  {<br>
+                  int color;<br>
+                  for (color = 0; color &lt; 8; color++)<br>
+                  　{<br>
+                  　textbackground(color);/*设置文本的背景颜色*/<br>
+                  　cprintf(&quot;This is color %d\r\n&quot;, color);<br>
+                  　cprintf(&quot;Press any key to continue\r\n&quot;);<br>
+                  　getch();/*输入字符看不见*/<br>
+                  　}<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序33】</font><br>
+                  题目：学习gotoxy()与clrscr()函数　　　<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  #include &lt;conio.h&gt;<br>
+                  void main(void)<br>
+                  {<br>
+                  clrscr();/*清屏函数*/<br>
+                  textbackground(2);<br>
+                  gotoxy(1, 5);/*定位函数*/<br>
+                  cprintf(&quot;Output at row 5 column 1\n&quot;);<br>
+                  textbackground(3);<br>
+                  gotoxy(20, 10);<br>
+                  cprintf(&quot;Output at row 10 column 20\n&quot;);<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序34】</font><br>
+                  题目：练习函数调用<br>
+                  1. 程序分析：<br>
+                  2.程序源代码：<br>
+                  #include &lt;stdio.h&gt;<br>
+                  void hello_world(void)<br>
+                  {<br>
+                  printf(&quot;Hello, world!\n&quot;);<br>
+                  }<br>
+                  void three_hellos(void)<br>
+                  {<br>
+                  int counter;<br>
+                  for (counter = 1; counter &lt;= 3; counter++)<br>
+                  hello_world();/*调用此函数*/<br>
+                  }<br>
+                  void main(void)<br>
+                  {<br>
+                  three_hellos();/*调用此函数*/<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序35】</font><br>
+                  题目：文本颜色设置<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  #include &lt;conio.h&gt;<br>
+                  void main(void)<br>
+                  {<br>
+                  int color;<br>
+                  for (color = 1; color &lt; 16; color++)<br>
+                  　{<br>
+                  　textcolor(color);/*设置文本颜色*/<br>
+                  　cprintf(&quot;This is color %d\r\n&quot;, color);<br>
+                  　}<br>
+                  textcolor(128 + 15);<br>
+                  cprintf(&quot;This is blinking\r\n&quot;);<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序36】</font><br>
+                  题目：求100之内的素数　　　<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  #include &lt;stdio.h&gt;<br>
+                  #include &quot;math.h&quot;<br>
+                  #define N 101<br>
+                  main()<br>
+                  {<br>
+                  int i,j,line,a[N];<br>
+                  for(i=2;i&lt;N;i++) a[i]=i;<br>
+                  for(i=2;i&lt;sqrt(N);i++)<br>
+                  　for(j=i+1;j&lt;N;j++)<br>
+                  　{<br>
+                  　　if(a[i]!=0&amp;&amp;a[j]!=0)<br>
+                  　　if(a[j]%a[i]==0)<br>
+                  　　a[j]=0;}<br>
+                  printf(&quot;\n&quot;);<br>
+                  for(i=2,line=0;i&lt;N;i++)<br>
+                  {<br>
+                  　if(a[i]!=0)<br>
+                  　{printf(&quot;%5d&quot;,a[i]);<br>
+                  　line++;}<br>
+                  　if(line==10)<br>
+                  　{printf(&quot;\n&quot;);<br>
+                  line=0;}<br>
+                  }<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序37】</font><br>
+                  题目：对10个数进行排序<br>
+                  1.程序分析：可以利用选择法，即从后9个比较过程中，选择一个最小的与第一个元素交换，<br>
+                  　　　　　　下次类推，即用第二个元素与后8个进行比较，并进行交换。 
+                  　　　　　　<br>
+                  2.程序源代码：<br>
+                  #define N 10<br>
+                  main()<br>
+                  {int i,j,min,tem,a[N];<br>
+                  /*input data*/<br>
+                  printf(&quot;please input ten num:\n&quot;);<br>
+                  for(i=0;i&lt;N;i++)<br>
+                  {<br>
+                  printf(&quot;a[%d]=&quot;,i);<br>
+                  scanf(&quot;%d&quot;,&amp;a[i]);}<br>
+                  printf(&quot;\n&quot;);<br>
+                  for(i=0;i&lt;N;i++)<br>
+                  printf(&quot;%5d&quot;,a[i]);<br>
+                  printf(&quot;\n&quot;);<br>
+                  /*sort ten num*/<br>
+                  for(i=0;i&lt;N-1;i++)<br>
+                  {min=i;<br>
+                  for(j=i+1;j&lt;N;j++)<br>
+                  if(a[min]&gt;a[j]) min=j;<br>
+                  tem=a[i];<br>
+                  a[i]=a[min];<br>
+                  a[min]=tem;<br>
+                  }<br>
+                  /*output data*/<br>
+                  printf(&quot;After sorted \n&quot;);<br>
+                  for(i=0;i&lt;N;i++)<br>
+                  printf(&quot;%5d&quot;,a[i]);<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序38】</font><br>
+                  题目：求一个3*3矩阵对角线元素之和<br>
+                  1.程序分析：利用双重for循环控制输入二维数组，再将a[i][i]累加后输出。<br>
+                  2.程序源代码：<br>
+                  main()<br>
+                  {<br>
+                  float a[3][3],sum=0;<br>
+                  int i,j;<br>
+                  printf(&quot;please input rectangle element:\n&quot;);<br>
+                  for(i=0;i&lt;3;i++)<br>
+                  　for(j=0;j&lt;3;j++)<br>
+                  　scanf(&quot;%f&quot;,&amp;a[i][j]);<br>
+                  for(i=0;i&lt;3;i++)<br>
+                  　sum=sum+a[i][i];<br>
+                  printf(&quot;duijiaoxian he is %6.2f&quot;,sum);<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序39】</font><br>
+                  题目：有一个已经排好序的数组。现输入一个数，要求按原来的规律将它插入数组中。<br>
+                  1. 
+                  程序分析：首先判断此数是否大于最后一个数，然后再考虑插入中间的数的情况，插入后<br>
+                  　　　　　此元素之后的数，依次后移一个位置。<br>
+                  2.程序源代码：<br>
+                  main()<br>
+                  {<br>
+                  int a[11]={1,4,6,9,13,16,19,28,40,100};<br>
+                  int temp1,temp2,number,end,i,j;<br>
+                  printf(&quot;original array is:\n&quot;);<br>
+                  for(i=0;i&lt;10;i++)<br>
+                  　printf(&quot;%5d&quot;,a[i]);<br>
+                  printf(&quot;\n&quot;);<br>
+                  printf(&quot;insert a new number:&quot;);<br>
+                  scanf(&quot;%d&quot;,&amp;number);<br>
+                  end=a[9];<br>
+                  if(number&gt;end)<br>
+                  　a[10]=number;<br>
+                  else<br>
+                  　{for(i=0;i&lt;10;i++)<br>
+                  　　{ if(a[i]&gt;number)<br>
+                  　　　{temp1=a[i];<br>
+                  　　　　a[i]=number;<br>
+                  　　　for(j=i+1;j&lt;11;j++)<br>
+                  　　　{temp2=a[j];<br>
+                  　　　　a[j]=temp1;<br>
+                  　　　　temp1=temp2;<br>
+                  　　　}<br>
+                  　　　break;<br>
+                  　　　}<br>
+                  　　}<br>
+                  }<br>
+                  for(i=0;i&lt;11;i++)<br>
+                  　printf(&quot;%6d&quot;,a[i]);<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序40】</font><br>
+                  题目：将一个数组逆序输出。<br>
+                  1.程序分析：用第一个与最后一个交换。<br>
+                  2.程序源代码：<br>
+                  #define N 5<br>
+                  main()<br>
+                  { int a[N]={9,6,5,4,1},i,temp;<br>
+                  　printf(&quot;\n original array:\n&quot;);<br>
+                  　for(i=0;i&lt;N;i++)<br>
+                  　printf(&quot;%4d&quot;,a[i]);<br>
+                  　for(i=0;i&lt;N/2;i++)<br>
+                  　{temp=a[i];<br>
+                  　　a[i]=a[N-i-1];<br>
+                  　　a[N-i-1]=temp;<br>
+                  　}<br>
+                  printf(&quot;\n sorted array:\n&quot;);<br>
+                  for(i=0;i&lt;N;i++)<br>
+                  　printf(&quot;%4d&quot;,a[i]);<br>
+                  }
+                </td>
+              </tr>
+            </table>
+          </TD>
+          <TD bgColor=#ffffff height=56 width="91">　
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=56 width="93">　
+          </TD>
+          <TD bgColor=#ffffff height=56 width="91">　
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=1 width="758" colspan="3">
+            <hr>
+          </TD></TR>
+        <TR>
+          <TD bgColor=#000000 height=14 width="758" colspan="3">　</TD></TR>
+        <TR>
+          <TD align=middle height=26 width="758" colspan="3">
+            <TABLE cellSpacing=0 cellPadding=5 width="80%" border=0>
+              <TBODY>
+              <TR align=middle>
+                <TD>关于我们</TD>
+                <TD>新闻公告</TD>
+                <TD><a href="http://www.tzc.edu.cn">学院主页</a></TD>
+                <TD><a href="http://www.lib.tzc.edu.cn">图书馆</a></TD>
+                <TD>信息中心</TD>
+                <TD><a href="http://www.ie.tzc.edu.cn">信息与电子工程学院</a></TD>
+                <TD></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- #EndLibraryItem --></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 border=0>
+        <TBODY>
+        <TR>
+          <TD bgColor=#d0d4d0 height=2><IMG height=1 
+            src="../image/spacer.gif" width=1></TD></TR>
+        <TR>
+          <TD bgColor=#000000 height=2><IMG height=1 
+            src="../image/spacer.gif" width=1></TD></TR>
+        <TR>
+          <TD bgColor=#618096><!-- #BeginLibraryItem "/Library/copyright.lbi" -->
+            <TABLE cellSpacing=0 cellPadding=6 width=500 align=center 
+              border=0><TBODY>
+              <TR>
+                <TD align=middle rowSpan=2></TD>
+                <TD align=middle><FONT 
+                  face="Verdana, Arial, Helvetica, sans-serif" color=#ffffff 
+                  size=1>Copyright &copy; 2003&nbsp; All rights                    
+                  reserved</FONT></TD>
+                <TD align=middle width=2 rowSpan=2></TD>
+                <TD align=middle width=2 rowSpan=2></TD></TR>
+              <TR>
+                <TD align=middle><font color="#ffffff">电教协会网络部制作、维护</font></TD></TR></TBODY></TABLE><!-- #EndLibraryItem --></TD></TR></TBODY></TABLE></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE></BODY></HTML>

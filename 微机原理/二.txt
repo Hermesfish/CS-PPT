@@ -1,0 +1,57 @@
+实验二 8254芯片使用
+a)	实验内容及要求
+使用8254完成跑马灯程序
+b)	实验硬件连接图
+ 
+c)	实验关键代码、调试过程及完成情况
+使用8254完成跑马灯程序
+CODE SEGMENT
+ASSUME CS:CODE
+START:
+
+     MOV DX,28BH
+     MOV AL,10000010B
+     OUT DX,AL                   ;A口输出,B口输入
+
+MOV BL,1H
+
+NEXT:   MOV AL, 35H
+        MOV DX,283H
+        OUT DX,AL           ;以上三句是对通道0写控制字
+        MOV AL,00H
+        MOV DX,280H
+        OUT DX,AL          ;以上三句是对通道0写计数初值的低字节
+        MOV AL,50H
+        OUT DX,AL           ;以上两句是对通道0写计数初值的高字节
+;N0=5000
+        MOV AL, 77H
+	    MOV DX,283H
+        OUT DX,AL           ;以上三句是对通道1写控制字
+        MOV AL,00H
+        MOV DX,281H
+        OUT DX,AL           ;以上三句是对通道1写计数初值的低字节
+        MOV AL,10H
+        OUT DX,AL           ;以上两句是对通道1写计数初值的高字节
+N1=1000
+
+       MOV DX,288H
+       MOV AL,BL
+       OUT DX,AL
+
+       MOV DX,289H
+  L3:
+       IN AL,DX
+       TEST AL,01H
+        JZ L3
+
+ ROL BL,1
+
+ JMP NEXT
+
+ CODE ENDS
+ EDN  START
+
+d)	遇到的问题及解决的方法
+硬件连线接口选择错误：8086偶地址接口其他芯片不分奇偶
+e)	实验体会及建议
+学会使用了8253/8254定时计时器的基本使用方法，根据需要设计电路，根据电路用输出指令向有关通道写入响应控制字和计数初值，对8253初始化编程。

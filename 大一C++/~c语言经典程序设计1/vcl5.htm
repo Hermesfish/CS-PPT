@@ -1,0 +1,536 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>经典C程序100例</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<STYLE type=text/css>TD {
+	FONT-SIZE: 12px
+}
+P {
+	FONT-SIZE: 12px
+}
+LI {
+	FONT-SIZE: 12px
+}
+INPUT {
+	FONT-SIZE: 12px
+}
+SELECT {
+	FONT-SIZE: 12px
+}
+.C01 {
+	FONT-SIZE: 7pt; COLOR: #ffffff; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+.L13 {
+	LINE-HEIGHT: 130%
+}
+.L15 {
+	LINE-HEIGHT: 150%
+}
+.L17 {
+	LINE-HEIGHT: 170%
+}
+.F7 {
+	FONT-SIZE: 7px
+}
+.F16 {
+	FONT-SIZE: 16px
+}
+.s01 {
+	BORDER-RIGHT: 1px inset; BORDER-TOP: 1px inset; VERTICAL-ALIGN: text-bottom; BORDER-LEFT: 1px inset; BORDER-BOTTOM: 1px inset; BACKGROUND-COLOR: #ffffff
+}
+.s02 {
+	BORDER-RIGHT: 1px ridge; BORDER-TOP: #ffffff 1px ridge; BORDER-LEFT: #ffffff 1px ridge; BORDER-BOTTOM: 1px ridge; BACKGROUND-COLOR: #cccccc
+}
+A:link {
+	COLOR: #00007f
+}
+A:visited {
+	COLOR: #65038e
+}
+A:active {
+	COLOR: #ff0000
+}
+A:hover {
+	COLOR: #ff0000
+}
+A.a01:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.a01:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.a01:active {
+	COLOR: #eeeeee; TEXT-DECORATION: none
+}
+A.a01:hover {
+	COLOR: #cccccc; TEXT-DECORATION: none
+}
+A.a02:link {
+	COLOR: #0000ff
+}
+A.a02:visited {
+	COLOR: #0000ff
+}
+A.a02:active {
+	COLOR: #ff0000
+}
+A.a02:hover {
+	COLOR: #ff0000
+}
+A.a03:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.a03:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.a03:active {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+A.a03:hover {
+	COLOR: #336699; TEXT-DECORATION: none
+}
+A.a04:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.a04:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.a04:active {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+A.a04:hover {
+	COLOR: #0066cc; TEXT-DECORATION: underline
+}
+.L13 {
+	LINE-HEIGHT: 130%
+}
+</STYLE>
+
+<META content="Microsoft FrontPage 4.0" name=GENERATOR></HEAD>
+<BODY text=#000000 bgColor=#999999 leftMargin=0 background=../image/bg1.gif 
+topMargin=0 marginheight="0" marginwidth="0">
+<DIV id=floater 
+style="z-index: 25; left: -6; visibility: hidden; width: 192; position: absolute; top: 483; height: 137">
+</DIV>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 align=center border=0>
+        <TBODY>
+        <TR>
+          <TD width=288 height=74>
+            <table border="0" width="759" cellspacing="0" cellpadding="0" height="72">
+              <tr>
+    <TD align=middle bgColor=#dfe9ee height=24 width="757">
+      <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                      
+      <IMG align=absMiddle height=12 
+                  src="../../image/dot.gif" width=14> <A class=yellow                                                                           
+                  href="http://djxh.tzc.edu.cn/" 
+                  onclick='this.style.behavior="url(#default#homepage)";this.setHomePage("http://djxh.tzc.edu.cn");'>设为首页</A> 
+                  <IMG align=absMiddle height=12                                                                           
+                  src="../../image/dot.gif" width=14> <A class=yellow                                                                           
+                  href="javascript:window.external.addFavorite('http://www.djxh.tzc.edu.cn','台州学院电教协会')">加入收藏</A>  
+                  <IMG align=absMiddle height=12                                                                          
+                  src="../../image/dot.gif" width=14>  <a href="mailto:yangwj3217@163.com">联系部长</a>                                                                          
+      </p>
+ </TD>
+              </tr>
+              <tr>
+    <TD bgColor=#a5b5c5 height=1 width="757"></TD>
+              </tr>
+              <tr>
+                <td width="757" height="72">
+                  <table border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+                    <tr>
+    <TD width="144" height=70><IMG src="../image/lb1.gif" width="143" height="54"></TD>
+    <TD align=middle width="16">
+    </TD>
+    <TD width="184">&nbsp;</TD>
+    <TD width="420"><img border="0" src="../image/banner5.gif" width="589" height="64"></TD>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </TD>
+        </TR></TBODY></TABLE><!-- #EndLibraryItem --></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 border=0>
+        <TBODY>
+        <TR>
+          <TD bgColor=#000000><!-- #BeginLibraryItem "/Library/top_menu.lbi" -->
+            <TABLE cellSpacing=0 cellPadding=0 width=760 align=center 
+            bgColor=#000000 border=0>
+              <TBODY>
+              <TR align=middle>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="../../index.htm">协会首页</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="../index.htm">网络部</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="http://">电教之窗</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="../../sysx/index.htm">摄影摄像部</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff>秘书处</FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="../../dmt/index.htm">多媒体部</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><font color="#ffffff">外联部</font></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%">
+                  　</TD></TR></TBODY></TABLE><!-- #EndLibraryItem --></TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=1><IMG height=1 
+            src="../image/spacer.gif" width=1></TD></TR></TBODY></TABLE></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 border=0>
+        <TBODY>
+        <TR>
+          <TD width=54 background=../image/2005_1.gif height=70><IMG 
+            height=1 src="../image/spacer.gif" width=1></TD>
+          <TD width=63 background=../image/2005_2.gif><IMG height=1 
+            src="../image/spacer.gif" width=1></TD>
+          <TD width=49 background=../image/2005_3.gif><IMG height=1 
+            src="../image/spacer.gif" width=1></TD>
+          <TD width=42 background=../image/2005_4.gif><IMG height=1 
+            src="../image/spacer.gif" width=1></TD>
+          <TD width=77 background=../image/2005_5.gif><IMG height=1 
+            src="../image/spacer.gif" width=1></TD>
+          <TD vAlign=top bgColor=#ffffff>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD width=475 background=../image/2005_6.gif height=22><IMG 
+                  height=1 src="../image/spacer.gif" width=1></TD></TR>
+              <TR>
+                <TD bgColor=#ffffff>
+                  <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD align=right><IMG height=37 src="../image/t3.gif" 
+                        width=441></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760 bgColor=#ffffff>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 border=0 height="80">
+        <TBODY>
+        <TR>
+          <TD bgColor=#ffffff height=1 width="758" colspan="3">
+            <hr>
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=12 width="752" colspan="3">□当前页面：<a href="../index.htm">首页</a>→<a href="vcl3.htm">经典C程序100例</a>→41－50
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=56 width="752" colspan="3">
+            <p align="center"><b><font color="#FF0000" size="5">经典c程序100例==41--50</font></b>
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=56 width="93">　
+          </TD>
+          <TD bgColor=#ffffff height=112 width="568" rowspan="2">
+            <table border="0" width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="100%"><font color="#990000">【程序41】</font><br>
+                  题目：学习static定义静态变量的用法　　　<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  #include &quot;stdio.h&quot;<br>
+                  varfunc()<br>
+                  {<br>
+                  int var=0;<br>
+                  static int static_var=0;<br>
+                  printf(&quot;\40:var equal %d \n&quot;,var);<br>
+                  printf(&quot;\40:static var equal %d \n&quot;,static_var);<br>
+                  printf(&quot;\n&quot;);<br>
+                  var++;<br>
+                  static_var++;<br>
+                  }<br>
+                  void main()<br>
+                  {int i;<br>
+                  　for(i=0;i&lt;3;i++)<br>
+                  　　varfunc();<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序42】</font><br>
+                  题目：学习使用auto定义变量的用法<br>
+                  1.程序分析：　　　　　　<br>
+                  2.程序源代码：<br>
+                  #include &quot;stdio.h&quot;<br>
+                  main()<br>
+                  {int i,num;<br>
+                  num=2;<br>
+                  　for (i=0;i&lt;3;i++)<br>
+                  　{ printf(&quot;\40: The num equal %d \n&quot;,num);<br>
+                  　　num++;<br>
+                  　　{<br>
+                  　　auto int num=1;<br>
+                  　　printf(&quot;\40: The internal block num equal %d \n&quot;,num);<br>
+                  　　num++;<br>
+                  　　}<br>
+                  　}<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序43】</font><br>
+                  题目：学习使用static的另一用法。　　　<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  #include &quot;stdio.h&quot;<br>
+                  main()<br>
+                  {<br>
+                  int i,num;<br>
+                  num=2;<br>
+                  for(i=0;i&lt;3;i++)<br>
+                  {<br>
+                  printf(&quot;\40: The num equal %d \n&quot;,num);<br>
+                  num++;<br>
+                  {<br>
+                  static int num=1;<br>
+                  printf(&quot;\40:The internal block num equal %d\n&quot;,num);<br>
+                  num++;<br>
+                  }<br>
+                  }<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序44】</font><br>
+                  题目：学习使用external的用法。<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  #include &quot;stdio.h&quot;<br>
+                  int a,b,c;<br>
+                  void add()<br>
+                  { int a;<br>
+                  a=3;<br>
+                  c=a+b;<br>
+                  }<br>
+                  void main()<br>
+                  { a=b=4;<br>
+                  add();<br>
+                  printf(&quot;The value of c is equal to %d\n&quot;,c);<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序45】</font><br>
+                  题目：学习使用register定义变量的方法。<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  void main()<br>
+                  {<br>
+                  register int i;<br>
+                  int tmp=0;<br>
+                  for(i=1;i&lt;=100;i++)<br>
+                  tmp+=i;<br>
+                  printf(&quot;The sum is %d\n&quot;,tmp);<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序46】</font><br>
+                  题目：宏#define命令练习(1)　　　<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  #include &quot;stdio.h&quot;<br>
+                  #define TRUE 1<br>
+                  #define FALSE 0<br>
+                  #define SQ(x) (x)*(x)<br>
+                  void main()<br>
+                  {<br>
+                  int num;<br>
+                  int again=1;<br>
+                  printf(&quot;\40: Program will stop if input value less than 
+                  50.\n&quot;);<br>
+                  while(again)<br>
+                  {<br>
+                  printf(&quot;\40:Please input number==&gt;&quot;);<br>
+                  scanf(&quot;%d&quot;,&amp;num);<br>
+                  printf(&quot;\40:The square for this number is %d \n&quot;,SQ(num));<br>
+                  if(num&gt;=50)<br>
+                  　again=TRUE;<br>
+                  else<br>
+                  　again=FALSE;<br>
+                  }<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序47】</font><br>
+                  题目：宏#define命令练习(2)<br>
+                  1.程序分析：　　　　　　　　　　　　<br>
+                  2.程序源代码：<br>
+                  #include &quot;stdio.h&quot;<br>
+                  #define exchange(a,b) { \ /*宏定义中允许包含两道衣裳命令的情形，此时必须在最右边加上&quot;\&quot;*/<br>
+                  　　　　　　　　　　　　int t;\<br>
+                  　　　　　　　　　　　　t=a;\<br>
+                  　　　　　　　　　　　　a=b;\<br>
+                  　　　　　　　　　　　　b=t;\<br>
+                  　　　　　　　　　　　}<br>
+                  void main(void)<br>
+                  {<br>
+                  int x=10;<br>
+                  int y=20;<br>
+                  printf(&quot;x=%d; y=%d\n&quot;,x,y);<br>
+                  exchange(x,y);<br>
+                  printf(&quot;x=%d; y=%d\n&quot;,x,y);<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序48】</font><br>
+                  题目：宏#define命令练习(3)　　　<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  #define LAG &gt;<br>
+                  #define SMA &lt;<br>
+                  #define EQ ==<br>
+                  #include &quot;stdio.h&quot;<br>
+                  void main()<br>
+                  { int i=10;<br>
+                  int j=20;<br>
+                  if(i LAG j)<br>
+                  printf(&quot;\40: %d larger than %d \n&quot;,i,j);<br>
+                  else if(i EQ j)<br>
+                  printf(&quot;\40: %d equal to %d \n&quot;,i,j);<br>
+                  else if(i SMA j)<br>
+                  printf(&quot;\40:%d smaller than %d \n&quot;,i,j);<br>
+                  else<br>
+                  printf(&quot;\40: No such value.\n&quot;);<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序49】</font><br>
+                  题目：#if #ifdef和#ifndef的综合应用。<br>
+                  1. 程序分析：<br>
+                  2.程序源代码：<br>
+                  #include &quot;stdio.h&quot;<br>
+                  #define MAX<br>
+                  #define MAXIMUM(x,y) (x&gt;y)?x:y<br>
+                  #define MINIMUM(x,y) (x&gt;y)?y:x<br>
+                  void main()<br>
+                  { int a=10,b=20;<br>
+                  #ifdef MAX<br>
+                  printf(&quot;\40: The larger one is %d\n&quot;,MAXIMUM(a,b));<br>
+                  #else<br>
+                  printf(&quot;\40: The lower one is %d\n&quot;,MINIMUM(a,b));<br>
+                  #endif<br>
+                  #ifndef MIN<br>
+                  printf(&quot;\40: The lower one is %d\n&quot;,MINIMUM(a,b));<br>
+                  #else<br>
+                  printf(&quot;\40: The larger one is %d\n&quot;,MAXIMUM(a,b));<br>
+                  #endif<br>
+                  #undef MAX<br>
+                  #ifdef MAX<br>
+                  printf(&quot;\40: The larger one is %d\n&quot;,MAXIMUM(a,b));<br>
+                  #else<br>
+                  printf(&quot;\40: The lower one is %d\n&quot;,MINIMUM(a,b));<br>
+                  #endif<br>
+                  #define MIN<br>
+                  #ifndef MIN<br>
+                  printf(&quot;\40: The lower one is %d\n&quot;,MINIMUM(a,b));<br>
+                  #else<br>
+                  printf(&quot;\40: The larger one is %d\n&quot;,MAXIMUM(a,b));<br>
+                  #endif<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序50】</font><br>
+                  题目：#include 的应用练习　　　<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  test.h 文件如下：<br>
+                  #define LAG &gt;<br>
+                  #define SMA &lt;<br>
+                  #define EQ ==<br>
+                  #include &quot;test.h&quot; /*一个新文件50.c，包含test.h*/<br>
+                  #include &quot;stdio.h&quot;<br>
+                  void main()<br>
+                  { int i=10;<br>
+                  int j=20;<br>
+                  if(i LAG j)<br>
+                  printf(&quot;\40: %d larger than %d \n&quot;,i,j);<br>
+                  else if(i EQ j)<br>
+                  printf(&quot;\40: %d equal to %d \n&quot;,i,j);<br>
+                  else if(i SMA j)<br>
+                  printf(&quot;\40:%d smaller than %d \n&quot;,i,j);<br>
+                  else<br>
+                  printf(&quot;\40: No such value.\n&quot;);<br>
+                  }
+                </td>
+              </tr>
+            </table>
+          </TD>
+          <TD bgColor=#ffffff height=56 width="91">　
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=56 width="93">　
+          </TD>
+          <TD bgColor=#ffffff height=56 width="91">　
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=1 width="758" colspan="3">
+            <hr>
+          </TD></TR>
+        <TR>
+          <TD bgColor=#000000 height=14 width="758" colspan="3">　</TD></TR>
+        <TR>
+          <TD align=middle height=26 width="758" colspan="3">
+            <TABLE cellSpacing=0 cellPadding=5 width="80%" border=0>
+              <TBODY>
+              <TR align=middle>
+                <TD>关于我们</TD>
+                <TD>新闻公告</TD>
+                <TD><a href="http://www.tzc.edu.cn">学院主页</a></TD>
+                <TD><a href="http://www.lib.tzc.edu.cn">图书馆</a></TD>
+                <TD>信息中心</TD>
+                <TD><a href="http://www.ie.tzc.edu.cn">信息与电子工程学院</a></TD>
+                <TD></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- #EndLibraryItem --></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 border=0>
+        <TBODY>
+        <TR>
+          <TD bgColor=#d0d4d0 height=2><IMG height=1 
+            src="../image/spacer.gif" width=1></TD></TR>
+        <TR>
+          <TD bgColor=#000000 height=2><IMG height=1 
+            src="../image/spacer.gif" width=1></TD></TR>
+        <TR>
+          <TD bgColor=#618096><!-- #BeginLibraryItem "/Library/copyright.lbi" -->
+            <TABLE cellSpacing=0 cellPadding=6 width=500 align=center 
+              border=0><TBODY>
+              <TR>
+                <TD align=middle rowSpan=2></TD>
+                <TD align=middle><FONT 
+                  face="Verdana, Arial, Helvetica, sans-serif" color=#ffffff 
+                  size=1>Copyright &copy; 2003&nbsp; All rights                    
+                  reserved</FONT></TD>
+                <TD align=middle width=2 rowSpan=2></TD>
+                <TD align=middle width=2 rowSpan=2></TD></TR>
+              <TR>
+                <TD align=middle><font color="#ffffff">电教协会网络部制作、维护</font></TD></TR></TBODY></TABLE><!-- #EndLibraryItem --></TD></TR></TBODY></TABLE></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE></BODY></HTML>

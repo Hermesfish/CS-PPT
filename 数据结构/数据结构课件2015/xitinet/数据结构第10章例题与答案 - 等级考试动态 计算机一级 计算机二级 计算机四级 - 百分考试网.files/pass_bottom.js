@@ -1,5 +1,0 @@
-document.writeln("<div id=\"bottom\" class=\"wrap\">");
-document.writeln("  <div id=\"about\" class=\"hei\"><a href=\"\/about.html\" target=\"_blank\">关于我们<\/a> - <a href=\"\/adservice.html\" target=\"_blank\">广告服务<\/a> - <a href=\"\/contact.html\" target=\"_blank\">联系我们<\/a> - <a href=\"\/sitemap.html\" target=\"_blank\">网站地图<\/a> - <a href=\"\/friendlink.html\" target=\"_blank\">友情链接<\/a> - <a href=\"\/familysite.html\" target=\"_blank\">合作网站<\/a><\/div>");
-document.writeln("  <div id=\"corp\" class=\"nounder hei\"><a href=\"http:\/\/www.miibeian.gov.cn\/\" target=\"_blank\">粤ICP备06067076号<\/a><br \/>");
-document.writeln("  Copyright &copy; 2006 <strong><a href=\"http:\/\/www.pass100.net\/\"><font color=\"#1656AD\">Pass100<\/font><\/a><\/strong> Some Rights Reserved.<\/div>");
-document.writeln("<\/div>");

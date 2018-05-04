@@ -1,0 +1,582 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>经典C程序100例</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<STYLE type=text/css>TD {
+	FONT-SIZE: 12px
+}
+P {
+	FONT-SIZE: 12px
+}
+LI {
+	FONT-SIZE: 12px
+}
+INPUT {
+	FONT-SIZE: 12px
+}
+SELECT {
+	FONT-SIZE: 12px
+}
+.C01 {
+	FONT-SIZE: 7pt; COLOR: #ffffff; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+.L13 {
+	LINE-HEIGHT: 130%
+}
+.L15 {
+	LINE-HEIGHT: 150%
+}
+.L17 {
+	LINE-HEIGHT: 170%
+}
+.F7 {
+	FONT-SIZE: 7px
+}
+.F16 {
+	FONT-SIZE: 16px
+}
+.s01 {
+	BORDER-RIGHT: 1px inset; BORDER-TOP: 1px inset; VERTICAL-ALIGN: text-bottom; BORDER-LEFT: 1px inset; BORDER-BOTTOM: 1px inset; BACKGROUND-COLOR: #ffffff
+}
+.s02 {
+	BORDER-RIGHT: 1px ridge; BORDER-TOP: #ffffff 1px ridge; BORDER-LEFT: #ffffff 1px ridge; BORDER-BOTTOM: 1px ridge; BACKGROUND-COLOR: #cccccc
+}
+A:link {
+	COLOR: #00007f
+}
+A:visited {
+	COLOR: #65038e
+}
+A:active {
+	COLOR: #ff0000
+}
+A:hover {
+	COLOR: #ff0000
+}
+A.a01:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.a01:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.a01:active {
+	COLOR: #eeeeee; TEXT-DECORATION: none
+}
+A.a01:hover {
+	COLOR: #cccccc; TEXT-DECORATION: none
+}
+A.a02:link {
+	COLOR: #0000ff
+}
+A.a02:visited {
+	COLOR: #0000ff
+}
+A.a02:active {
+	COLOR: #ff0000
+}
+A.a02:hover {
+	COLOR: #ff0000
+}
+A.a03:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.a03:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.a03:active {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+A.a03:hover {
+	COLOR: #336699; TEXT-DECORATION: none
+}
+A.a04:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.a04:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.a04:active {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+A.a04:hover {
+	COLOR: #0066cc; TEXT-DECORATION: underline
+}
+.L13 {
+	LINE-HEIGHT: 130%
+}
+</STYLE>
+
+<META content="Microsoft FrontPage 4.0" name=GENERATOR></HEAD>
+<BODY text=#000000 bgColor=#999999 leftMargin=0 background=../image/bg1.gif 
+topMargin=0 marginheight="0" marginwidth="0">
+<DIV id=floater 
+style="z-index: 25; left: -6; visibility: hidden; width: 192; position: absolute; top: 483; height: 137">
+</DIV>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 align=center border=0>
+        <TBODY>
+        <TR>
+          <TD width=288 height=74>
+            <table border="0" width="759" cellspacing="0" cellpadding="0" height="72">
+              <tr>
+    <TD align=middle bgColor=#dfe9ee height=24 width="757">
+      <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                      
+      <IMG align=absMiddle height=12 
+                  src="../../image/dot.gif" width=14> <A class=yellow                                                                           
+                  href="http://djxh.tzc.edu.cn/" 
+                  onclick='this.style.behavior="url(#default#homepage)";this.setHomePage("http://djxh.tzc.edu.cn");'>设为首页</A> 
+                  <IMG align=absMiddle height=12                                                                           
+                  src="../../image/dot.gif" width=14> <A class=yellow                                                                           
+                  href="javascript:window.external.addFavorite('http://www.djxh.tzc.edu.cn','台州学院电教协会')">加入收藏</A>  
+                  <IMG align=absMiddle height=12                                                                          
+                  src="../../image/dot.gif" width=14>  <a href="mailto:yangwj3217@163.com">联系部长</a>                                                                          
+      </p>
+ </TD>
+              </tr>
+              <tr>
+    <TD bgColor=#a5b5c5 height=1 width="757"></TD>
+              </tr>
+              <tr>
+                <td width="757" height="72">
+                  <table border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+                    <tr>
+    <TD width="144" height=70><IMG src="../image/lb1.gif" width="143" height="54"></TD>
+    <TD align=middle width="16">
+    </TD>
+    <TD width="184">&nbsp;</TD>
+    <TD width="420"><img border="0" src="../image/banner5.gif" width="589" height="64"></TD>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </TD>
+        </TR></TBODY></TABLE><!-- #EndLibraryItem --></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 border=0>
+        <TBODY>
+        <TR>
+          <TD bgColor=#000000><!-- #BeginLibraryItem "/Library/top_menu.lbi" -->
+            <TABLE cellSpacing=0 cellPadding=0 width=760 align=center 
+            bgColor=#000000 border=0>
+              <TBODY>
+              <TR align=middle>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="../../index.htm">协会首页</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="../index.htm">网络部</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="http://">电教之窗</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="../../sysx/index.htm">摄影摄像部</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff>秘书处</FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="../../dmt/index.htm">多媒体部</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><font color="#ffffff">外联部</font></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%">
+                  　</TD></TR></TBODY></TABLE><!-- #EndLibraryItem --></TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=1><IMG height=1 
+            src="../image/spacer.gif" width=1></TD></TR></TBODY></TABLE></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 border=0>
+        <TBODY>
+        <TR>
+          <TD width=54 background=../image/2005_1.gif height=70><IMG 
+            height=1 src="../image/spacer.gif" width=1></TD>
+          <TD width=63 background=../image/2005_2.gif><IMG height=1 
+            src="../image/spacer.gif" width=1></TD>
+          <TD width=49 background=../image/2005_3.gif><IMG height=1 
+            src="../image/spacer.gif" width=1></TD>
+          <TD width=42 background=../image/2005_4.gif><IMG height=1 
+            src="../image/spacer.gif" width=1></TD>
+          <TD width=77 background=../image/2005_5.gif><IMG height=1 
+            src="../image/spacer.gif" width=1></TD>
+          <TD vAlign=top bgColor=#ffffff>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD width=475 background=../image/2005_6.gif height=22><IMG 
+                  height=1 src="../image/spacer.gif" width=1></TD></TR>
+              <TR>
+                <TD bgColor=#ffffff>
+                  <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD align=right><IMG height=37 src="../image/t3.gif" 
+                        width=441></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760 bgColor=#ffffff>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 border=0 height="80">
+        <TBODY>
+        <TR>
+          <TD bgColor=#ffffff height=1 width="758" colspan="3">
+            <hr>
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=12 width="752" colspan="3">□当前页面：<a href="../index.htm">首页</a>→<a href="vcl3.htm">经典C程序100例</a>→51－60
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=56 width="752" colspan="3">
+            <p align="center"><b><font color="#FF0000" size="5">经典c程序100例==51--60</font></b>
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=56 width="93">　
+          </TD>
+          <TD bgColor=#ffffff height=112 width="568" rowspan="2">
+            <table border="0" width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="100%"><font color="#990000">【程序51】</font><br>
+                  题目：学习使用按位与 &amp; 。　　　<br>
+                  1.程序分析：0&amp;0=0; 0&amp;1=0; 1&amp;0=0; 1&amp;1=1<br>
+                  2.程序源代码：<br>
+                  #include &quot;stdio.h&quot;<br>
+                  main()<br>
+                  {<br>
+                  int a,b;<br>
+                  a=077;<br>
+                  b=a&amp;3;<br>
+                  printf(&quot;\40: The a &amp; b(decimal) is %d \n&quot;,b);<br>
+                  b&amp;=7;<br>
+                  printf(&quot;\40: The a &amp; b(decimal) is %d \n&quot;,b);<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序52】</font><br>
+                  题目：学习使用按位或 | 。<br>
+                  1.程序分析：0|0=0; 0|1=1; 1|0=1; 1|1=1　　　　　　　　　　　　<br>
+                  2.程序源代码：<br>
+                  #include &quot;stdio.h&quot;<br>
+                  main()<br>
+                  {<br>
+                  int a,b;<br>
+                  a=077;<br>
+                  b=a|3;<br>
+                  printf(&quot;\40: The a &amp; b(decimal) is %d \n&quot;,b);<br>
+                  b|=7;<br>
+                  printf(&quot;\40: The a &amp; b(decimal) is %d \n&quot;,b);<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序53】</font><br>
+                  题目：学习使用按位异或 ^ 。　　　<br>
+                  1.程序分析：0^0=0; 0^1=1; 1^0=1; 1^1=0<br>
+                  2.程序源代码：<br>
+                  #include &quot;stdio.h&quot;<br>
+                  main()<br>
+                  {<br>
+                  int a,b;<br>
+                  a=077;<br>
+                  b=a^3;<br>
+                  printf(&quot;\40: The a &amp; b(decimal) is %d \n&quot;,b);<br>
+                  b^=7;<br>
+                  printf(&quot;\40: The a &amp; b(decimal) is %d \n&quot;,b);<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序54】</font><br>
+                  题目：取一个整数a从右端开始的4～7位。<br>
+                  程序分析：可以这样考虑：<br>
+                  (1)先使a右移4位。<br>
+                  (2)设置一个低4位全为1,其余全为0的数。可用~(~0&lt;&lt;4)<br>
+                  (3)将上面二者进行&amp;运算。<br>
+                  2.程序源代码：<br>
+                  main()<br>
+                  {<br>
+                  unsigned a,b,c,d;<br>
+                  scanf(&quot;%o&quot;,&amp;a);<br>
+                  b=a&gt;&gt;4;<br>
+                  c=~(~0&lt;&lt;4);<br>
+                  d=b&amp;c;<br>
+                  printf(&quot;%o\n%o\n&quot;,a,d);<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序55】</font><br>
+                  题目：学习使用按位取反~。　　　<br>
+                  1.程序分析：~0=1; ~1=0;<br>
+                  2.程序源代码：<br>
+                  #include &quot;stdio.h&quot;<br>
+                  main()<br>
+                  {<br>
+                  int a,b;<br>
+                  a=234;<br>
+                  b=~a;<br>
+                  printf(&quot;\40: The a's 1 complement(decimal) is %d \n&quot;,b);<br>
+                  a=~a;<br>
+                  printf(&quot;\40: The a's 1 complement(hexidecimal) is %x \n&quot;,a);<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序56】</font><br>
+                  题目：画图，学用circle画圆形。　　　<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  /*circle*/<br>
+                  #include &quot;graphics.h&quot;<br>
+                  main()<br>
+                  {int driver,mode,i;<br>
+                  float j=1,k=1;<br>
+                  driver=VGA;mode=VGAHI;<br>
+                  initgraph(&amp;driver,&amp;mode,&quot;&quot;);<br>
+                  setbkcolor(YELLOW);<br>
+                  for(i=0;i&lt;=25;i++)<br>
+                  {<br>
+                  setcolor(8);<br>
+                  circle(310,250,k);<br>
+                  k=k+j;<br>
+                  j=j+0.3;<br>
+                  }<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序57】</font><br>
+                  题目：画图，学用line画直线。<br>
+                  1.程序分析：　　　　　　　　　　　<br>
+                  2.程序源代码：<br>
+                  #include &quot;graphics.h&quot;<br>
+                  main()<br>
+                  {int driver,mode,i;<br>
+                  float x0,y0,y1,x1;<br>
+                  float j=12,k;<br>
+                  driver=VGA;mode=VGAHI;<br>
+                  initgraph(&amp;driver,&amp;mode,&quot;&quot;);<br>
+                  setbkcolor(GREEN);<br>
+                  x0=263;y0=263;y1=275;x1=275;<br>
+                  for(i=0;i&lt;=18;i++)<br>
+                  {<br>
+                  setcolor(5);<br>
+                  line(x0,y0,x0,y1);<br>
+                  x0=x0-5;<br>
+                  y0=y0-5;<br>
+                  x1=x1+5;<br>
+                  y1=y1+5;<br>
+                  j=j+10;<br>
+                  }<br>
+                  x0=263;y1=275;y0=263;<br>
+                  for(i=0;i&lt;=20;i++)<br>
+                  {<br>
+                  setcolor(5);<br>
+                  line(x0,y0,x0,y1);<br>
+                  x0=x0+5;<br>
+                  y0=y0+5;<br>
+                  y1=y1-5;<br>
+                  }<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序58】</font><br>
+                  题目：画图，学用rectangle画方形。　　　<br>
+                  1.程序分析：利用for循环控制100-999个数，每个数分解出个位，十位，百位。<br>
+                  2.程序源代码：<br>
+                  #include &quot;graphics.h&quot;<br>
+                  main()<br>
+                  {int x0,y0,y1,x1,driver,mode,i;<br>
+                  driver=VGA;mode=VGAHI;<br>
+                  initgraph(&amp;driver,&amp;mode,&quot;&quot;);<br>
+                  setbkcolor(YELLOW);<br>
+                  x0=263;y0=263;y1=275;x1=275;<br>
+                  for(i=0;i&lt;=18;i++)<br>
+                  {<br>
+                  setcolor(1);<br>
+                  rectangle(x0,y0,x1,y1);<br>
+                  x0=x0-5;<br>
+                  y0=y0-5;<br>
+                  x1=x1+5;<br>
+                  y1=y1+5;<br>
+                  }<br>
+                  settextstyle(DEFAULT_FONT,HORIZ_DIR,2);<br>
+                  outtextxy(150,40,&quot;How beautiful it is!&quot;);<br>
+                  line(130,60,480,60);<br>
+                  setcolor(2);<br>
+                  circle(269,269,137);<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序59】</font><br>
+                  题目：画图，综合例子。<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  # define PAI 3.1415926<br>
+                  # define B 0.809<br>
+                  # include &quot;graphics.h&quot;<br>
+                  #include &quot;math.h&quot;<br>
+                  main()<br>
+                  {<br>
+                  int i,j,k,x0,y0,x,y,driver,mode;<br>
+                  float a;<br>
+                  driver=CGA;mode=CGAC0;<br>
+                  initgraph(&amp;driver,&amp;mode,&quot;&quot;);<br>
+                  setcolor(3);<br>
+                  setbkcolor(GREEN);<br>
+                  x0=150;y0=100;<br>
+                  circle(x0,y0,10);<br>
+                  circle(x0,y0,20);<br>
+                  circle(x0,y0,50);<br>
+                  for(i=0;i&lt;16;i++)<br>
+                  {<br>
+                  　a=(2*PAI/16)*i;<br>
+                  　x=ceil(x0+48*cos(a));<br>
+                  　y=ceil(y0+48*sin(a)*B);<br>
+                  　setcolor(2); line(x0,y0,x,y);}<br>
+                  setcolor(3);circle(x0,y0,60);<br>
+                  /* Make 0 time normal size letters */<br>
+                  settextstyle(DEFAULT_FONT,HORIZ_DIR,0);<br>
+                  outtextxy(10,170,&quot;press a key&quot;);<br>
+                  getch();<br>
+                  setfillstyle(HATCH_FILL,YELLOW);<br>
+                  floodfill(202,100,WHITE);<br>
+                  getch();<br>
+                  for(k=0;k&lt;=500;k++)<br>
+                  {<br>
+                  　setcolor(3);<br>
+                  　for(i=0;i&lt;=16;i++)<br>
+                  　{<br>
+                  　　a=(2*PAI/16)*i+(2*PAI/180)*k;<br>
+                  　　x=ceil(x0+48*cos(a));<br>
+                  　　y=ceil(y0+48+sin(a)*B);<br>
+                  　　setcolor(2); line(x0,y0,x,y);<br>
+                  　}<br>
+                  　for(j=1;j&lt;=50;j++)<br>
+                  　{<br>
+                  　　a=(2*PAI/16)*i+(2*PAI/180)*k-1;<br>
+                  　　x=ceil(x0+48*cos(a));<br>
+                  　　y=ceil(y0+48*sin(a)*B);<br>
+                  　　line(x0,y0,x,y);<br>
+                  　}<br>
+                  }<br>
+                  restorecrtmode();<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序60】</font><br>
+                  题目：画图，综合例子。　　　<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  #include &quot;graphics.h&quot;<br>
+                  #define LEFT 0<br>
+                  #define TOP 0<br>
+                  #define RIGHT 639<br>
+                  #define BOTTOM 479<br>
+                  #define LINES 400<br>
+                  #define MAXCOLOR 15<br>
+                  main()<br>
+                  {<br>
+                  int driver,mode,error;<br>
+                  int x1,y1;<br>
+                  int x2,y2;<br>
+                  int dx1,dy1,dx2,dy2,i=1;<br>
+                  int count=0;<br>
+                  int color=0;<br>
+                  driver=VGA;<br>
+                  mode=VGAHI;<br>
+                  initgraph(&amp;driver,&amp;mode,&quot;&quot;);<br>
+                  x1=x2=y1=y2=10;<br>
+                  dx1=dy1=2;<br>
+                  dx2=dy2=3;<br>
+                  while(!kbhit())<br>
+                  {<br>
+                  　line(x1,y1,x2,y2);<br>
+                  　x1+=dx1;y1+=dy1;<br>
+                  　x2+=dx2;y2+dy2;<br>
+                  　if(x1&lt;=LEFT||x1&gt;=RIGHT)<br>
+                  　dx1=-dx1;<br>
+                  　if(y1&lt;=TOP||y1&gt;=BOTTOM)<br>
+                  　　dy1=-dy1;<br>
+                  　if(x2&lt;=LEFT||x2&gt;=RIGHT)<br>
+                  　　dx2=-dx2;<br>
+                  　if(y2&lt;=TOP||y2&gt;=BOTTOM)<br>
+                  　　dy2=-dy2;<br>
+                  　if(++count&gt;LINES)<br>
+                  　{<br>
+                  　　setcolor(color);<br>
+                  　　color=(color&gt;=MAXCOLOR)?0:++color;<br>
+                  　}<br>
+                  }<br>
+                  closegraph();<br>
+                  }
+                </td>
+              </tr>
+            </table>
+          </TD>
+          <TD bgColor=#ffffff height=56 width="91">　
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=56 width="93">　
+          </TD>
+          <TD bgColor=#ffffff height=56 width="91">　
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=1 width="758" colspan="3">
+            <hr>
+          </TD></TR>
+        <TR>
+          <TD bgColor=#000000 height=14 width="758" colspan="3">　</TD></TR>
+        <TR>
+          <TD align=middle height=26 width="758" colspan="3">
+            <TABLE cellSpacing=0 cellPadding=5 width="80%" border=0>
+              <TBODY>
+              <TR align=middle>
+                <TD>关于我们</TD>
+                <TD>新闻公告</TD>
+                <TD><a href="http://www.tzc.edu.cn">学院主页</a></TD>
+                <TD><a href="http://www.lib.tzc.edu.cn">图书馆</a></TD>
+                <TD>信息中心</TD>
+                <TD><a href="http://www.ie.tzc.edu.cn">信息与电子工程学院</a></TD>
+                <TD></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- #EndLibraryItem --></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 border=0>
+        <TBODY>
+        <TR>
+          <TD bgColor=#d0d4d0 height=2><IMG height=1 
+            src="../image/spacer.gif" width=1></TD></TR>
+        <TR>
+          <TD bgColor=#000000 height=2><IMG height=1 
+            src="../image/spacer.gif" width=1></TD></TR>
+        <TR>
+          <TD bgColor=#618096><!-- #BeginLibraryItem "/Library/copyright.lbi" -->
+            <TABLE cellSpacing=0 cellPadding=6 width=500 align=center 
+              border=0><TBODY>
+              <TR>
+                <TD align=middle rowSpan=2></TD>
+                <TD align=middle><FONT 
+                  face="Verdana, Arial, Helvetica, sans-serif" color=#ffffff 
+                  size=1>Copyright &copy; 2003&nbsp; All rights                    
+                  reserved</FONT></TD>
+                <TD align=middle width=2 rowSpan=2></TD>
+                <TD align=middle width=2 rowSpan=2></TD></TR>
+              <TR>
+                <TD align=middle><font color="#ffffff">电教协会网络部制作、维护</font></TD></TR></TBODY></TABLE><!-- #EndLibraryItem --></TD></TR></TBODY></TABLE></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE></BODY></HTML>

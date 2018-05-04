@@ -1,0 +1,736 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>经典C程序100例</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<STYLE type=text/css>TD {
+	FONT-SIZE: 12px
+}
+P {
+	FONT-SIZE: 12px
+}
+LI {
+	FONT-SIZE: 12px
+}
+INPUT {
+	FONT-SIZE: 12px
+}
+SELECT {
+	FONT-SIZE: 12px
+}
+.C01 {
+	FONT-SIZE: 7pt; COLOR: #ffffff; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+.L13 {
+	LINE-HEIGHT: 130%
+}
+.L15 {
+	LINE-HEIGHT: 150%
+}
+.L17 {
+	LINE-HEIGHT: 170%
+}
+.F7 {
+	FONT-SIZE: 7px
+}
+.F16 {
+	FONT-SIZE: 16px
+}
+.s01 {
+	BORDER-RIGHT: 1px inset; BORDER-TOP: 1px inset; VERTICAL-ALIGN: text-bottom; BORDER-LEFT: 1px inset; BORDER-BOTTOM: 1px inset; BACKGROUND-COLOR: #ffffff
+}
+.s02 {
+	BORDER-RIGHT: 1px ridge; BORDER-TOP: #ffffff 1px ridge; BORDER-LEFT: #ffffff 1px ridge; BORDER-BOTTOM: 1px ridge; BACKGROUND-COLOR: #cccccc
+}
+A:link {
+	COLOR: #00007f
+}
+A:visited {
+	COLOR: #65038e
+}
+A:active {
+	COLOR: #ff0000
+}
+A:hover {
+	COLOR: #ff0000
+}
+A.a01:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.a01:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.a01:active {
+	COLOR: #eeeeee; TEXT-DECORATION: none
+}
+A.a01:hover {
+	COLOR: #cccccc; TEXT-DECORATION: none
+}
+A.a02:link {
+	COLOR: #0000ff
+}
+A.a02:visited {
+	COLOR: #0000ff
+}
+A.a02:active {
+	COLOR: #ff0000
+}
+A.a02:hover {
+	COLOR: #ff0000
+}
+A.a03:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.a03:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.a03:active {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+A.a03:hover {
+	COLOR: #336699; TEXT-DECORATION: none
+}
+A.a04:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.a04:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.a04:active {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+A.a04:hover {
+	COLOR: #0066cc; TEXT-DECORATION: underline
+}
+.L13 {
+	LINE-HEIGHT: 130%
+}
+</STYLE>
+
+<META content="Microsoft FrontPage 4.0" name=GENERATOR></HEAD>
+<BODY text=#000000 bgColor=#999999 leftMargin=0 background=../image/bg1.gif 
+topMargin=0 marginheight="0" marginwidth="0">
+<DIV id=floater 
+style="z-index: 25; left: -6; visibility: hidden; width: 192; position: absolute; top: 483; height: 137">
+</DIV>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 align=center border=0>
+        <TBODY>
+        <TR>
+          <TD width=288 height=74>
+            <table border="0" width="759" cellspacing="0" cellpadding="0" height="72">
+              <tr>
+    <TD align=middle bgColor=#dfe9ee height=24 width="757">
+      <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                      
+      <IMG align=absMiddle height=12 
+                  src="../../image/dot.gif" width=14> <A class=yellow                                                                           
+                  href="http://djxh.tzc.edu.cn/" 
+                  onclick='this.style.behavior="url(#default#homepage)";this.setHomePage("http://djxh.tzc.edu.cn");'>设为首页</A> 
+                  <IMG align=absMiddle height=12                                                                           
+                  src="../../image/dot.gif" width=14> <A class=yellow                                                                           
+                  href="javascript:window.external.addFavorite('http://www.djxh.tzc.edu.cn','台州学院电教协会')">加入收藏</A>  
+                  <IMG align=absMiddle height=12                                                                          
+                  src="../../image/dot.gif" width=14>  <a href="mailto:yangwj3217@163.com">联系部长</a>                                                                          
+      </p>
+ </TD>
+              </tr>
+              <tr>
+    <TD bgColor=#a5b5c5 height=1 width="757"></TD>
+              </tr>
+              <tr>
+                <td width="757" height="72">
+                  <table border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+                    <tr>
+    <TD width="144" height=70><IMG src="../image/lb1.gif" width="143" height="54"></TD>
+    <TD align=middle width="16">
+    </TD>
+    <TD width="184">&nbsp;</TD>
+    <TD width="420"><img border="0" src="../image/banner5.gif" width="589" height="64"></TD>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </TD>
+        </TR></TBODY></TABLE><!-- #EndLibraryItem --></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 border=0>
+        <TBODY>
+        <TR>
+          <TD bgColor=#000000><!-- #BeginLibraryItem "/Library/top_menu.lbi" -->
+            <TABLE cellSpacing=0 cellPadding=0 width=760 align=center 
+            bgColor=#000000 border=0>
+              <TBODY>
+              <TR align=middle>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="../../index.htm">协会首页</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="../index.htm">网络部</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="http://">电教之窗</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="../../sysx/index.htm">摄影摄像部</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff>秘书处</FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="../../dmt/index.htm">多媒体部</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><font color="#ffffff">外联部</font></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%">
+                  　</TD></TR></TBODY></TABLE><!-- #EndLibraryItem --></TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=1><IMG height=1 
+            src="../image/spacer.gif" width=1></TD></TR></TBODY></TABLE></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 border=0>
+        <TBODY>
+        <TR>
+          <TD width=54 background=../image/2005_1.gif height=70><IMG 
+            height=1 src="../image/spacer.gif" width=1></TD>
+          <TD width=63 background=../image/2005_2.gif><IMG height=1 
+            src="../image/spacer.gif" width=1></TD>
+          <TD width=49 background=../image/2005_3.gif><IMG height=1 
+            src="../image/spacer.gif" width=1></TD>
+          <TD width=42 background=../image/2005_4.gif><IMG height=1 
+            src="../image/spacer.gif" width=1></TD>
+          <TD width=77 background=../image/2005_5.gif><IMG height=1 
+            src="../image/spacer.gif" width=1></TD>
+          <TD vAlign=top bgColor=#ffffff>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD width=475 background=../image/2005_6.gif height=22><IMG 
+                  height=1 src="../image/spacer.gif" width=1></TD></TR>
+              <TR>
+                <TD bgColor=#ffffff>
+                  <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD align=right><IMG height=37 src="../image/t3.gif" 
+                        width=441></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760 bgColor=#ffffff>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 border=0 height="80">
+        <TBODY>
+        <TR>
+          <TD bgColor=#ffffff height=1 width="758" colspan="3">
+            <hr>
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=12 width="752" colspan="3">□当前页面：<a href="../index.htm">首页</a>→<a href="vcl3.htm">经典C程序100例</a>→91－100
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=56 width="752" colspan="3">
+            <p align="center"><b><font color="#FF0000" size="5">经典c程序100例==91--100</font></b>
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=56 width="93">　
+          </TD>
+          <TD bgColor=#ffffff height=112 width="568" rowspan="2">
+            <table border="0" width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="100%"><font color="#990000">【程序91】</font><br>
+                  题目：时间函数举例1<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  #include &quot;stdio.h&quot;<br>
+                  #include &quot;time.h&quot;<br>
+                  void main()<br>
+                  { time_t lt; /*define a longint time varible*/<br>
+                  lt=time(NULL);/*system time and date*/<br>
+                  printf(ctime(&lt;)); /*english format output*/<br>
+                  printf(asctime(localtime(&lt;)));/*tranfer to tm*/<br>
+                  printf(asctime(gmtime(&lt;))); /*tranfer to Greenwich time*/<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序92】</font><br>
+                  题目：时间函数举例2<br>
+                  1.程序分析：　　　　　　　　　　　<br>
+                  2.程序源代码：<br>
+                  /*calculate time*/<br>
+                  #include &quot;time.h&quot;<br>
+                  #include &quot;stdio.h&quot;<br>
+                  main()<br>
+                  { time_t start,end;<br>
+                  int i;<br>
+                  start=time(NULL);<br>
+                  for(i=0;i&lt;3000;i++)<br>
+                  { printf(&quot;\1\1\1\1\1\1\1\1\1\1\n&quot;);}<br>
+                  end=time(NULL);<br>
+                  printf(&quot;\1: The different is %6.3f\n&quot;,difftime(end,start));<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序93】</font><br>
+                  题目：时间函数举例3<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  /*calculate time*/<br>
+                  #include &quot;time.h&quot;<br>
+                  #include &quot;stdio.h&quot;<br>
+                  main()<br>
+                  { clock_t start,end;<br>
+                  int i;<br>
+                  double var;<br>
+                  start=clock();<br>
+                  for(i=0;i&lt;10000;i++)<br>
+                  { printf(&quot;\1\1\1\1\1\1\1\1\1\1\n&quot;);}<br>
+                  end=clock();<br>
+                  printf(&quot;\1: The different is %6.3f\n&quot;,(double)(end-start));<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序94】</font><br>
+                  题目：时间函数举例4,一个猜数游戏，判断一个人反应快慢。（版主初学时编的）<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  #include &quot;time.h&quot;<br>
+                  #include &quot;stdlib.h&quot;<br>
+                  #include &quot;stdio.h&quot;<br>
+                  main()<br>
+                  {char c;<br>
+                  clock_t start,end;<br>
+                  time_t a,b;<br>
+                  double var;<br>
+                  int i,guess;<br>
+                  srand(time(NULL));<br>
+                  printf(&quot;do you want to play it.('y' or 'n') \n&quot;);<br>
+                  loop:<br>
+                  while((c=getchar())=='y')<br>
+                  {<br>
+                  i=rand()%100;<br>
+                  printf(&quot;\nplease input number you guess:\n&quot;);<br>
+                  start=clock();<br>
+                  a=time(NULL);<br>
+                  scanf(&quot;%d&quot;,&amp;guess);<br>
+                  while(guess!=i)<br>
+                  {if(guess&gt;i)<br>
+                  {printf(&quot;please input a little smaller.\n&quot;);<br>
+                  scanf(&quot;%d&quot;,&amp;guess);}<br>
+                  else<br>
+                  {printf(&quot;please input a little bigger.\n&quot;);<br>
+                  scanf(&quot;%d&quot;,&amp;guess);}<br>
+                  }<br>
+                  end=clock();<br>
+                  b=time(NULL);<br>
+                  printf(&quot;\1: It took you %6.3f seconds\n&quot;,var=(double)(end-start)/18.2);<br>
+                  printf(&quot;\1: it took you %6.3f seconds\n\n&quot;,difftime(b,a));<br>
+                  if(var&lt;15)<br>
+                  printf(&quot;\1\1 You are very clever! \1\1\n\n&quot;);<br>
+                  else if(var&lt;25)<br>
+                  printf(&quot;\1\1 you are normal! \1\1\n\n&quot;);<br>
+                  else<br>
+                  printf(&quot;\1\1 you are stupid! \1\1\n\n&quot;);<br>
+                  printf(&quot;\1\1 Congradulations \1\1\n\n&quot;);<br>
+                  printf(&quot;The number you guess is %d&quot;,i);<br>
+                  }<br>
+                  printf(&quot;\ndo you want to try it again?(\&quot;yy\&quot;.or.\&quot;n\&quot;)\n&quot;);<br>
+                  if((c=getch())=='y')<br>
+                  goto loop;<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序95】</font><br>
+                  题目：家庭财务管理小程序<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  /*money management system*/<br>
+                  #include &quot;stdio.h&quot;<br>
+                  #include &quot;dos.h&quot;<br>
+                  main()<br>
+                  {<br>
+                  FILE *fp;<br>
+                  struct date d;<br>
+                  float sum,chm=0.0;<br>
+                  int len,i,j=0;<br>
+                  int c;<br>
+                  char 
+                  ch[4]=&quot;&quot;,ch1[16]=&quot;&quot;,chtime[12]=&quot;&quot;,chshop[16],chmoney[8];<br>
+                  pp: clrscr();<br>
+                  sum=0.0;<br>
+                  gotoxy(1,1);printf(&quot;|---------------------------------------------------------------------------|&quot;);<br>
+                  gotoxy(1,2);printf(&quot;| money management system(C1.0) 
+                  2000.03 |&quot;);<br>
+                  gotoxy(1,3);printf(&quot;|---------------------------------------------------------------------------|&quot;);<br>
+                  gotoxy(1,4);printf(&quot;| -- money records -- | -- today cost 
+                  list -- |&quot;);<br>
+                  gotoxy(1,5);printf(&quot;| ------------------------ 
+                  |-------------------------------------|&quot;);<br>
+                  gotoxy(1,6);printf(&quot;| date: -------------- | |&quot;);<br>
+                  gotoxy(1,7);printf(&quot;| | | | |&quot;);<br>
+                  gotoxy(1,8);printf(&quot;| -------------- | |&quot;);<br>
+                  gotoxy(1,9);printf(&quot;| thgs: ------------------ | 
+                  |&quot;);<br>
+                  gotoxy(1,10);printf(&quot;| | | | |&quot;);<br>
+                  gotoxy(1,11);printf(&quot;| ------------------ | |&quot;);<br>
+                  gotoxy(1,12);printf(&quot;| cost: ---------- | |&quot;);<br>
+                  gotoxy(1,13);printf(&quot;| | | | |&quot;);<br>
+                  gotoxy(1,14);printf(&quot;| ---------- | |&quot;);<br>
+                  gotoxy(1,15);printf(&quot;| | |&quot;);<br>
+                  gotoxy(1,16);printf(&quot;| | |&quot;);<br>
+                  gotoxy(1,17);printf(&quot;| | |&quot;);<br>
+                  gotoxy(1,18);printf(&quot;| | |&quot;);<br>
+                  gotoxy(1,19);printf(&quot;| | |&quot;);<br>
+                  gotoxy(1,20);printf(&quot;| | |&quot;);<br>
+                  gotoxy(1,21);printf(&quot;| | |&quot;);<br>
+                  gotoxy(1,22);printf(&quot;| | |&quot;);<br>
+                  gotoxy(1,23);printf(&quot;|---------------------------------------------------------------------------|&quot;);<br>
+                  i=0;<br>
+                  getdate(&amp;d);<br>
+                  sprintf(chtime,&quot;%4d.%02d.%02d&quot;,d.da_year,d.da_mon,d.da_day);<br>
+                  for(;;)<br>
+                  {<br>
+                  gotoxy(3,24);printf(&quot; Tab __browse cost list Esc 
+                  __quit&quot;);<br>
+                  gotoxy(13,10);printf(&quot; &quot;);<br>
+                  gotoxy(13,13);printf(&quot; &quot;);<br>
+                  gotoxy(13,7);printf(&quot;%s&quot;,chtime);<br>
+                  j=18;<br>
+                  ch[0]=getch();<br>
+                  if(ch[0]==27)<br>
+                  break;<br>
+                  strcpy(chshop,&quot;&quot;);<br>
+                  strcpy(chmoney,&quot;&quot;);<br>
+                  if(ch[0]==9)<br>
+                  {<br>
+                  mm:i=0;<br>
+                  fp=fopen(&quot;home.dat&quot;,&quot;r+&quot;);<br>
+                  gotoxy(3,24);printf(&quot; &quot;);<br>
+                  gotoxy(6,4);printf(&quot; list records &quot;);<br>
+                  gotoxy(1,5);printf(&quot;|-------------------------------------|&quot;);<br>
+                  gotoxy(41,4);printf(&quot; &quot;);<br>
+                  gotoxy(41,5);printf(&quot; |&quot;);<br>
+                  while(fscanf(fp,&quot;%10s%14s%f\n&quot;,chtime,chshop,&amp;chm)!=EOF)<br>
+                  { if(i==36)<br>
+                  { getch();<br>
+                  i=0;}<br>
+                  if ((i%36)&lt;17)<br>
+                  { gotoxy(4,6+i);<br>
+                  printf(&quot; &quot;);<br>
+                  gotoxy(4,6+i);}<br>
+                  else<br>
+                  if((i%36)&gt;16)<br>
+                  { gotoxy(41,4+i-17);<br>
+                  printf(&quot; &quot;);<br>
+                  gotoxy(42,4+i-17);}<br>
+                  i++;<br>
+                  sum=sum+chm;<br>
+                  printf(&quot;%10s %-14s %6.1f\n&quot;,chtime,chshop,chm);}<br>
+                  gotoxy(1,23);printf(&quot;|---------------------------------------------------------------------------|&quot;);<br>
+                  gotoxy(1,24);printf(&quot;| |&quot;);<br>
+                  gotoxy(1,25);printf(&quot;|---------------------------------------------------------------------------|&quot;);<br>
+                  gotoxy(10,24);printf(&quot;total is %8.1f$&quot;,sum);<br>
+                  fclose(fp);<br>
+                  gotoxy(49,24);printf(&quot;press any key to.....&quot;);getch();goto 
+                  pp;<br>
+                  }<br>
+                  else<br>
+                  {<br>
+                  while(ch[0]!='\r')<br>
+                  { if(j&lt;10)<br>
+                  { strncat(chtime,ch,1);<br>
+                  j++;}<br>
+                  if(ch[0]==8)<br>
+                  {<br>
+                  len=strlen(chtime)-1;<br>
+                  if(j&gt;15)<br>
+                  { len=len+1; j=11;}<br>
+                  strcpy(ch1,&quot;&quot;);<br>
+                  j=j-2;<br>
+                  strncat(ch1,chtime,len);<br>
+                  strcpy(chtime,&quot;&quot;);<br>
+                  strncat(chtime,ch1,len-1);<br>
+                  gotoxy(13,7);printf(&quot; &quot;);}<br>
+                  gotoxy(13,7);printf(&quot;%s&quot;,chtime);ch[0]=getch();<br>
+                  if(ch[0]==9)<br>
+                  goto mm;<br>
+                  if(ch[0]==27)<br>
+                  exit(1);<br>
+                  }<br>
+                  gotoxy(3,24);printf(&quot; &quot;);<br>
+                  gotoxy(13,10);<br>
+                  j=0;<br>
+                  ch[0]=getch();<br>
+                  while(ch[0]!='\r')<br>
+                  { if (j&lt;14)<br>
+                  { strncat(chshop,ch,1);<br>
+                  j++;}<br>
+                  if(ch[0]==8)<br>
+                  { len=strlen(chshop)-1;<br>
+                  strcpy(ch1,&quot;&quot;);<br>
+                  j=j-2;<br>
+                  strncat(ch1,chshop,len);<br>
+                  strcpy(chshop,&quot;&quot;);<br>
+                  strncat(chshop,ch1,len-1);<br>
+                  gotoxy(13,10);printf(&quot; &quot;);}<br>
+                  gotoxy(13,10);printf(&quot;%s&quot;,chshop);ch[0]=getch();}<br>
+                  gotoxy(13,13);<br>
+                  j=0;<br>
+                  ch[0]=getch();<br>
+                  while(ch[0]!='\r')<br>
+                  { if (j&lt;6)<br>
+                  { strncat(chmoney,ch,1);<br>
+                  j++;}<br>
+                  if(ch[0]==8)<br>
+                  { len=strlen(chmoney)-1;<br>
+                  strcpy(ch1,&quot;&quot;);<br>
+                  j=j-2;<br>
+                  strncat(ch1,chmoney,len);<br>
+                  strcpy(chmoney,&quot;&quot;);<br>
+                  strncat(chmoney,ch1,len-1);<br>
+                  gotoxy(13,13);printf(&quot; &quot;);}<br>
+                  gotoxy(13,13);printf(&quot;%s&quot;,chmoney);ch[0]=getch();}<br>
+                  if((strlen(chshop)==0)||(strlen(chmoney)==0))<br>
+                  continue;<br>
+                  if((fp=fopen(&quot;home.dat&quot;,&quot;a+&quot;))!=NULL);<br>
+                  fprintf(fp,&quot;%10s%14s%6s&quot;,chtime,chshop,chmoney);<br>
+                  fputc('\n',fp);<br>
+                  fclose(fp);<br>
+                  i++;<br>
+                  gotoxy(41,5+i);<br>
+                  printf(&quot;%10s %-14s %-6s&quot;,chtime,chshop,chmoney);<br>
+                  }}}<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序96】</font><br>
+                  题目：计算字符串中子串出现的次数<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  #include &quot;string.h&quot;<br>
+                  #include &quot;stdio.h&quot;<br>
+                  main()<br>
+                  { char str1[20],str2[20],*p1,*p2;<br>
+                  int sum=0;<br>
+                  printf(&quot;please input two strings\n&quot;);<br>
+                  scanf(&quot;%s%s&quot;,str1,str2);<br>
+                  p1=str1;p2=str2;<br>
+                  while(*p1!='\0')<br>
+                  {<br>
+                  if(*p1==*p2)<br>
+                  {while(*p1==*p2&amp;&amp;*p2!='\0')<br>
+                  {p1++;<br>
+                  p2++;}<br>
+                  }<br>
+                  else<br>
+                  p1++;<br>
+                  if(*p2=='\0')<br>
+                  sum++;<br>
+                  p2=str2;<br>
+                  }<br>
+                  printf(&quot;%d&quot;,sum);<br>
+                  getch();}<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序97】</font><br>
+                  题目：从键盘输入一些字符，逐个把它们送到磁盘上去，直到输入一个#为止。<br>
+                  1.程序分析：　　　　　<br>
+                  2.程序源代码：<br>
+                  #include &quot;stdio.h&quot;<br>
+                  main()<br>
+                  { FILE *fp;<br>
+                  char ch,filename[10];<br>
+                  scanf(&quot;%s&quot;,filename);<br>
+                  if((fp=fopen(filename,&quot;w&quot;))==NULL)<br>
+                  {printf(&quot;cannot open file\n&quot;);<br>
+                  exit(0);}<br>
+                  ch=getchar();<br>
+                  ch=getchar();<br>
+                  while(ch!='#')<br>
+                  {fputc(ch,fp);putchar(ch);<br>
+                  ch=getchar();<br>
+                  }<br>
+                  fclose(fp);<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序98】</font><br>
+                  题目：从键盘输入一个字符串，将小写字母全部转换成大写字母，然后输出到一个磁盘文件“test”中保存。<br>
+                  　　　输入的字符串以！结束。<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  #include &quot;stdio.h&quot;<br>
+                  main()<br>
+                  {FILE *fp;<br>
+                  char str[100],filename[10];<br>
+                  int i=0;<br>
+                  if((fp=fopen(&quot;test&quot;,&quot;w&quot;))==NULL)<br>
+                  { printf(&quot;cannot open the file\n&quot;);<br>
+                  exit(0);}<br>
+                  printf(&quot;please input a string:\n&quot;);<br>
+                  gets(str);<br>
+                  while(str[i]!='!')<br>
+                  { if(str[i]&gt;='a'&amp;&amp;str[i]&lt;='z')<br>
+                  str[i]=str[i]-32;<br>
+                  fputc(str[i],fp);<br>
+                  i++;}<br>
+                  fclose(fp);<br>
+                  fp=fopen(&quot;test&quot;,&quot;r&quot;);<br>
+                  fgets(str,strlen(str)+1,fp);<br>
+                  printf(&quot;%s\n&quot;,str);<br>
+                  fclose(fp);<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序99】</font><br>
+                  题目：有两个磁盘文件A和B,各存放一行字母，要求把这两个文件中的信息合并（按字母顺序排列），<br>
+                  　　　输出到一个新文件C中。<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  #include &quot;stdio.h&quot;<br>
+                  main()<br>
+                  { FILE *fp;<br>
+                  int i,j,n,ni;<br>
+                  char c[160],t,ch;<br>
+                  if((fp=fopen(&quot;A&quot;,&quot;r&quot;))==NULL)<br>
+                  {printf(&quot;file A cannot be opened\n&quot;);<br>
+                  exit(0);}<br>
+                  printf(&quot;\n A contents are :\n&quot;);<br>
+                  for(i=0;(ch=fgetc(fp))!=EOF;i++)<br>
+                  {c[i]=ch;<br>
+                  putchar(c[i]);<br>
+                  }<br>
+                  fclose(fp);<br>
+                  ni=i;<br>
+                  if((fp=fopen(&quot;B&quot;,&quot;r&quot;))==NULL)<br>
+                  {printf(&quot;file B cannot be opened\n&quot;);<br>
+                  exit(0);}<br>
+                  printf(&quot;\n B contents are :\n&quot;);<br>
+                  for(i=0;(ch=fgetc(fp))!=EOF;i++)<br>
+                  {c[i]=ch;<br>
+                  putchar(c[i]);<br>
+                  }<br>
+                  fclose(fp);<br>
+                  n=i;<br>
+                  for(i=0;i&lt;n;i++)<br>
+                  for(j=i+1;j&lt;n;j++)<br>
+                  if(c[i]&gt;c[j])<br>
+                  {t=c[i];c[i]=c[j];c[j]=t;}<br>
+                  printf(&quot;\n C file is:\n&quot;);<br>
+                  fp=fopen(&quot;C&quot;,&quot;w&quot;);<br>
+                  for(i=0;i&lt;n;i++)<br>
+                  { putc(c[i],fp);<br>
+                  putchar(c[i]);<br>
+                  }<br>
+                  fclose(fp);<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序100】</font><br>
+                  题目：有五个学生，每个学生有3门课的成绩，从键盘输入以上数据（包括学生号，姓名，三门课成绩），计算出<br>
+                  　　　平均成绩，况原有的数据和计算出的平均分数存放在磁盘文件&quot;stud&quot;中。<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  #include &quot;stdio.h&quot;<br>
+                  struct student<br>
+                  { char num[6];<br>
+                  char name[8];<br>
+                  int score[3];<br>
+                  float avr;<br>
+                  } stu[5];<br>
+                  main()<br>
+                  {int i,j,sum;<br>
+                  FILE *fp;<br>
+                  /*input*/<br>
+                  for(i=0;i&lt;5;i++)<br>
+                  { printf(&quot;\n please input No. %d score:\n&quot;,i);<br>
+                  printf(&quot;stuNo:&quot;);<br>
+                  scanf(&quot;%s&quot;,stu[i].num);<br>
+                  printf(&quot;name:&quot;);<br>
+                  scanf(&quot;%s&quot;,stu[i].name);<br>
+                  sum=0;<br>
+                  for(j=0;j&lt;3;j++)<br>
+                  { printf(&quot;score %d.&quot;,j+1);<br>
+                  scanf(&quot;%d&quot;,&amp;stu[i].score[j]);<br>
+                  sum+=stu[i].score[j];<br>
+                  }<br>
+                  stu[i].avr=sum/3.0;<br>
+                  }<br>
+                  fp=fopen(&quot;stud&quot;,&quot;w&quot;);<br>
+                  for(i=0;i&lt;5;i++)<br>
+                  if(fwrite(&amp;stu[i],sizeof(struct student),1,fp)!=1)<br>
+                  printf(&quot;file write error\n&quot;);<br>
+                  fclose(fp);<br>
+                  }
+                </td>
+              </tr>
+            </table>
+          </TD>
+          <TD bgColor=#ffffff height=56 width="91">　
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=56 width="93">　
+          </TD>
+          <TD bgColor=#ffffff height=56 width="91">　
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=1 width="758" colspan="3">
+            <hr>
+          </TD></TR>
+        <TR>
+          <TD bgColor=#000000 height=14 width="758" colspan="3">　</TD></TR>
+        <TR>
+          <TD align=middle height=26 width="758" colspan="3">
+            <TABLE cellSpacing=0 cellPadding=5 width="80%" border=0>
+              <TBODY>
+              <TR align=middle>
+                <TD>关于我们</TD>
+                <TD>新闻公告</TD>
+                <TD><a href="http://www.tzc.edu.cn">学院主页</a></TD>
+                <TD><a href="http://www.lib.tzc.edu.cn">图书馆</a></TD>
+                <TD>信息中心</TD>
+                <TD><a href="http://www.ie.tzc.edu.cn">信息与电子工程学院</a></TD>
+                <TD></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- #EndLibraryItem --></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 border=0>
+        <TBODY>
+        <TR>
+          <TD bgColor=#d0d4d0 height=2><IMG height=1 
+            src="../image/spacer.gif" width=1></TD></TR>
+        <TR>
+          <TD bgColor=#000000 height=2><IMG height=1 
+            src="../image/spacer.gif" width=1></TD></TR>
+        <TR>
+          <TD bgColor=#618096><!-- #BeginLibraryItem "/Library/copyright.lbi" -->
+            <TABLE cellSpacing=0 cellPadding=6 width=500 align=center 
+              border=0><TBODY>
+              <TR>
+                <TD align=middle rowSpan=2></TD>
+                <TD align=middle><FONT 
+                  face="Verdana, Arial, Helvetica, sans-serif" color=#ffffff 
+                  size=1>Copyright &copy; 2003&nbsp; All rights                    
+                  reserved</FONT></TD>
+                <TD align=middle width=2 rowSpan=2></TD>
+                <TD align=middle width=2 rowSpan=2></TD></TR>
+              <TR>
+                <TD align=middle><font color="#ffffff">电教协会网络部制作、维护</font></TD></TR></TBODY></TABLE><!-- #EndLibraryItem --></TD></TR></TBODY></TABLE></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE></BODY></HTML>

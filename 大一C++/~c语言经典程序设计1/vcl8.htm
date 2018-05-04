@@ -1,0 +1,672 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>经典C程序100例</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<STYLE type=text/css>TD {
+	FONT-SIZE: 12px
+}
+P {
+	FONT-SIZE: 12px
+}
+LI {
+	FONT-SIZE: 12px
+}
+INPUT {
+	FONT-SIZE: 12px
+}
+SELECT {
+	FONT-SIZE: 12px
+}
+.C01 {
+	FONT-SIZE: 7pt; COLOR: #ffffff; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+.L13 {
+	LINE-HEIGHT: 130%
+}
+.L15 {
+	LINE-HEIGHT: 150%
+}
+.L17 {
+	LINE-HEIGHT: 170%
+}
+.F7 {
+	FONT-SIZE: 7px
+}
+.F16 {
+	FONT-SIZE: 16px
+}
+.s01 {
+	BORDER-RIGHT: 1px inset; BORDER-TOP: 1px inset; VERTICAL-ALIGN: text-bottom; BORDER-LEFT: 1px inset; BORDER-BOTTOM: 1px inset; BACKGROUND-COLOR: #ffffff
+}
+.s02 {
+	BORDER-RIGHT: 1px ridge; BORDER-TOP: #ffffff 1px ridge; BORDER-LEFT: #ffffff 1px ridge; BORDER-BOTTOM: 1px ridge; BACKGROUND-COLOR: #cccccc
+}
+A:link {
+	COLOR: #00007f
+}
+A:visited {
+	COLOR: #65038e
+}
+A:active {
+	COLOR: #ff0000
+}
+A:hover {
+	COLOR: #ff0000
+}
+A.a01:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.a01:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.a01:active {
+	COLOR: #eeeeee; TEXT-DECORATION: none
+}
+A.a01:hover {
+	COLOR: #cccccc; TEXT-DECORATION: none
+}
+A.a02:link {
+	COLOR: #0000ff
+}
+A.a02:visited {
+	COLOR: #0000ff
+}
+A.a02:active {
+	COLOR: #ff0000
+}
+A.a02:hover {
+	COLOR: #ff0000
+}
+A.a03:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.a03:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.a03:active {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+A.a03:hover {
+	COLOR: #336699; TEXT-DECORATION: none
+}
+A.a04:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.a04:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.a04:active {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+A.a04:hover {
+	COLOR: #0066cc; TEXT-DECORATION: underline
+}
+.L13 {
+	LINE-HEIGHT: 130%
+}
+</STYLE>
+
+<META content="Microsoft FrontPage 4.0" name=GENERATOR></HEAD>
+<BODY text=#000000 bgColor=#999999 leftMargin=0 background=../image/bg1.gif 
+topMargin=0 marginheight="0" marginwidth="0">
+<DIV id=floater 
+style="z-index: 25; left: -6; visibility: hidden; width: 192; position: absolute; top: 483; height: 137">
+</DIV>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 align=center border=0>
+        <TBODY>
+        <TR>
+          <TD width=288 height=74>
+            <table border="0" width="759" cellspacing="0" cellpadding="0" height="72">
+              <tr>
+    <TD align=middle bgColor=#dfe9ee height=24 width="757">
+      <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                      
+      <IMG align=absMiddle height=12 
+                  src="../../image/dot.gif" width=14> <A class=yellow                                                                           
+                  href="http://djxh.tzc.edu.cn/" 
+                  onclick='this.style.behavior="url(#default#homepage)";this.setHomePage("http://djxh.tzc.edu.cn");'>设为首页</A> 
+                  <IMG align=absMiddle height=12                                                                           
+                  src="../../image/dot.gif" width=14> <A class=yellow                                                                           
+                  href="javascript:window.external.addFavorite('http://www.djxh.tzc.edu.cn','台州学院电教协会')">加入收藏</A>  
+                  <IMG align=absMiddle height=12                                                                          
+                  src="../../image/dot.gif" width=14>  <a href="mailto:yangwj3217@163.com">联系部长</a>                                                                          
+      </p>
+ </TD>
+              </tr>
+              <tr>
+    <TD bgColor=#a5b5c5 height=1 width="757"></TD>
+              </tr>
+              <tr>
+                <td width="757" height="72">
+                  <table border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+                    <tr>
+    <TD width="144" height=70><IMG src="../image/lb1.gif" width="143" height="54"></TD>
+    <TD align=middle width="16">
+    </TD>
+    <TD width="184">&nbsp;</TD>
+    <TD width="420"><img border="0" src="../image/banner5.gif" width="589" height="64"></TD>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </TD>
+        </TR></TBODY></TABLE><!-- #EndLibraryItem --></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 border=0>
+        <TBODY>
+        <TR>
+          <TD bgColor=#000000><!-- #BeginLibraryItem "/Library/top_menu.lbi" -->
+            <TABLE cellSpacing=0 cellPadding=0 width=760 align=center 
+            bgColor=#000000 border=0>
+              <TBODY>
+              <TR align=middle>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="../../index.htm">协会首页</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="../index.htm">网络部</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="http://">电教之窗</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="../../sysx/index.htm">摄影摄像部</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff>秘书处</FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><FONT color=#ffffff><a class="a01" href="../../dmt/index.htm">多媒体部</a></FONT></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%"><font color="#ffffff">外联部</font></TD>
+                <TD width=1 height=16><IMG height=20 
+                  src="../image/linkbg.gif" width=1></TD>
+                <TD width="10%">
+                  　</TD></TR></TBODY></TABLE><!-- #EndLibraryItem --></TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=1><IMG height=1 
+            src="../image/spacer.gif" width=1></TD></TR></TBODY></TABLE></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 border=0>
+        <TBODY>
+        <TR>
+          <TD width=54 background=../image/2005_1.gif height=70><IMG 
+            height=1 src="../image/spacer.gif" width=1></TD>
+          <TD width=63 background=../image/2005_2.gif><IMG height=1 
+            src="../image/spacer.gif" width=1></TD>
+          <TD width=49 background=../image/2005_3.gif><IMG height=1 
+            src="../image/spacer.gif" width=1></TD>
+          <TD width=42 background=../image/2005_4.gif><IMG height=1 
+            src="../image/spacer.gif" width=1></TD>
+          <TD width=77 background=../image/2005_5.gif><IMG height=1 
+            src="../image/spacer.gif" width=1></TD>
+          <TD vAlign=top bgColor=#ffffff>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD width=475 background=../image/2005_6.gif height=22><IMG 
+                  height=1 src="../image/spacer.gif" width=1></TD></TR>
+              <TR>
+                <TD bgColor=#ffffff>
+                  <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD align=right><IMG height=37 src="../image/t3.gif" 
+                        width=441></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760 bgColor=#ffffff>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 border=0 height="80">
+        <TBODY>
+        <TR>
+          <TD bgColor=#ffffff height=1 width="758" colspan="3">
+            <hr>
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=12 width="752" colspan="3">□当前页面：<a href="../index.htm">首页</a>→<a href="vcl3.htm">经典C程序100例</a>→71－80
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=56 width="752" colspan="3">
+            <p align="center"><b><font color="#FF0000" size="5">经典c程序100例==71--80</font></b>
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=56 width="93">　
+          </TD>
+          <TD bgColor=#ffffff height=112 width="568" rowspan="2">
+            <table border="0" width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="100%"><font color="#990000">【程序71】</font><br>
+                  题目：编写input()和output()函数输入，输出5个学生的数据记录。<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  #define N 5<br>
+                  struct student<br>
+                  { char num[6];<br>
+                  　char name[8];<br>
+                  　int score[4];<br>
+                  } stu[N];<br>
+                  input(stu)<br>
+                  struct student stu[];<br>
+                  { int i,j;<br>
+                  　for(i=0;i&lt;N;i++)<br>
+                  　{ printf(&quot;\n please input %d of %d\n&quot;,i+1,N);<br>
+                  　　printf(&quot;num: &quot;);<br>
+                  　　scanf(&quot;%s&quot;,stu[i].num);<br>
+                  　　printf(&quot;name: &quot;);<br>
+                  　　scanf(&quot;%s&quot;,stu[i].name);<br>
+                  　　　for(j=0;j&lt;3;j++)<br>
+                  　　　{ printf(&quot;score %d.&quot;,j+1);<br>
+                  　　　　scanf(&quot;%d&quot;,&amp;stu[i].score[j]);<br>
+                  　　　}<br>
+                  　　printf(&quot;\n&quot;);<br>
+                  　}<br>
+                  }<br>
+                  print(stu)<br>
+                  struct student stu[];<br>
+                  { int i,j;<br>
+                  printf(&quot;\nNo. Name Sco1 Sco2 Sco3\n&quot;);<br>
+                  for(i=0;i&lt;N;i++)<br>
+                  { printf(&quot;%-6s%-10s&quot;,stu[i].num,stu[i].name);<br>
+                  　for(j=0;j&lt;3;j++)<br>
+                  　　printf(&quot;%-8d&quot;,stu[i].score[j]);<br>
+                  　printf(&quot;\n&quot;);<br>
+                  }<br>
+                  }<br>
+                  main()<br>
+                  {<br>
+                  　input();<br>
+                  　print();<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序72】</font><br>
+                  题目：创建一个链表。<br>
+                  1.程序分析：　　　　　　　　　　　<br>
+                  2.程序源代码：<br>
+                  /*creat a list*/<br>
+                  #include &quot;stdlib.h&quot;<br>
+                  #include &quot;stdio.h&quot;<br>
+                  struct list<br>
+                  { int data;<br>
+                  struct list *next;<br>
+                  };<br>
+                  typedef struct list node;<br>
+                  typedef node *link;<br>
+                  void main()<br>
+                  { link ptr,head;<br>
+                  int num,i;<br>
+                  ptr=(link)malloc(sizeof(node));<br>
+                  ptr=head;<br>
+                  printf(&quot;please input 5 numbers==&gt;\n&quot;);<br>
+                  for(i=0;i&lt;=4;i++)<br>
+                  {<br>
+                  　scanf(&quot;%d&quot;,&amp;num);<br>
+                  　ptr-&gt;data=num;<br>
+                  　ptr-&gt;next=(link)malloc(sizeof(node));<br>
+                  　if(i==4) ptr-&gt;next=NULL;<br>
+                  　else ptr=ptr-&gt;next;<br>
+                  }<br>
+                  ptr=head;<br>
+                  while(ptr!=NULL)<br>
+                  { printf(&quot;The value is ==&gt;%d\n&quot;,ptr-&gt;data);<br>
+                  　ptr=ptr-&gt;next;<br>
+                  }<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序73】</font><br>
+                  题目：反向输出一个链表。　　　<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  /*reverse output a list*/<br>
+                  #include &quot;stdlib.h&quot;<br>
+                  #include &quot;stdio.h&quot;<br>
+                  struct list<br>
+                  { int data;<br>
+                  　struct list *next;<br>
+                  };<br>
+                  typedef struct list node;<br>
+                  typedef node *link;<br>
+                  void main()<br>
+                  { link ptr,head,tail;　<br>
+                  　int num,i;<br>
+                  　tail=(link)malloc(sizeof(node));<br>
+                  　tail-&gt;next=NULL;<br>
+                  　ptr=tail;<br>
+                  　printf(&quot;\nplease input 5 data==&gt;\n&quot;);<br>
+                  　for(i=0;i&lt;=4;i++)<br>
+                  　{<br>
+                  　　scanf(&quot;%d&quot;,&amp;num);<br>
+                  　　ptr-&gt;data=num;<br>
+                  　　head=(link)malloc(sizeof(node));<br>
+                  　　head-&gt;next=ptr;<br>
+                  　　ptr=head;<br>
+                  　}<br>
+                  ptr=ptr-&gt;next;<br>
+                  while(ptr!=NULL)<br>
+                  { printf(&quot;The value is ==&gt;%d\n&quot;,ptr-&gt;data);<br>
+                  　ptr=ptr-&gt;next;<br>
+                  }}<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序74】</font><br>
+                  题目：连接两个链表。<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  #include &quot;stdlib.h&quot;<br>
+                  #include &quot;stdio.h&quot;<br>
+                  struct list<br>
+                  { int data;<br>
+                  struct list *next;<br>
+                  };<br>
+                  typedef struct list node;<br>
+                  typedef node *link;<br>
+                  link delete_node(link pointer,link tmp)<br>
+                  {if (tmp==NULL) /*delete first node*/<br>
+                  　return pointer-&gt;next;<br>
+                  else<br>
+                  { if(tmp-&gt;next-&gt;next==NULL)/*delete last node*/<br>
+                  　　tmp-&gt;next=NULL;<br>
+                  　else /*delete the other node*/<br>
+                  　　tmp-&gt;next=tmp-&gt;next-&gt;next;<br>
+                  　return pointer;<br>
+                  }<br>
+                  }<br>
+                  void selection_sort(link pointer,int num)<br>
+                  { link tmp,btmp;<br>
+                  　int i,min;<br>
+                  　for(i=0;i&lt;num;i++)<br>
+                  　{<br>
+                  　tmp=pointer;<br>
+                  　min=tmp-&gt;data;<br>
+                  　btmp=NULL;<br>
+                  　while(tmp-&gt;next)<br>
+                  　{ if(min&gt;tmp-&gt;next-&gt;data)<br>
+                  　{min=tmp-&gt;next-&gt;data;<br>
+                  　　btmp=tmp;<br>
+                  　}<br>
+                  　tmp=tmp-&gt;next;<br>
+                  　}<br>
+                  printf(&quot;\40: %d\n&quot;,min);<br>
+                  pointer=delete_node(pointer,btmp);<br>
+                  }<br>
+                  }<br>
+                  link create_list(int array[],int num)<br>
+                  { link tmp1,tmp2,pointer;<br>
+                  int i;<br>
+                  pointer=(link)malloc(sizeof(node));<br>
+                  pointer-&gt;data=array[0];<br>
+                  tmp1=pointer;<br>
+                  for(i=1;i&lt;num;i++)<br>
+                  { tmp2=(link)malloc(sizeof(node));<br>
+                  　tmp2-&gt;next=NULL;<br>
+                  　tmp2-&gt;data=array[i];<br>
+                  　tmp1-&gt;next=tmp2;<br>
+                  　tmp1=tmp1-&gt;next;<br>
+                  }<br>
+                  return pointer;<br>
+                  }<br>
+                  link concatenate(link pointer1,link pointer2)<br>
+                  { link tmp;<br>
+                  tmp=pointer1;<br>
+                  while(tmp-&gt;next)<br>
+                  　tmp=tmp-&gt;next;<br>
+                  tmp-&gt;next=pointer2;<br>
+                  return pointer1;<br>
+                  }<br>
+                  void main(void)<br>
+                  { int arr1[]={3,12,8,9,11};<br>
+                  　link ptr;<br>
+                  　ptr=create_list(arr1,5);<br>
+                  　selection_sort(ptr,5);<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序75】</font><br>
+                  题目：放松一下，算一道简单的题目。<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  main()<br>
+                  {<br>
+                  int i,n;<br>
+                  for(i=1;i&lt;5;i++)<br>
+                  { n=0;<br>
+                  　if(i!=1)<br>
+                  　n=n+1;<br>
+                  　if(i==3)<br>
+                  　n=n+1;<br>
+                  　if(i==4)<br>
+                  　n=n+1;<br>
+                  　if(i!=4)<br>
+                  　n=n+1;<br>
+                  　if(n==3)<br>
+                  　　printf(&quot;zhu hao shi de shi:%c&quot;,64+i);<br>
+                  　}<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序76】</font><br>
+                  题目：编写一个函数，输入n为偶数时，调用函数求1/2+1/4+...+1/n,当输入n为奇数时，调用函数<br>
+                  　　　1/1+1/3+...+1/n(利用指针函数)<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  main()<br>
+                  #include &quot;stdio.h&quot;<br>
+                  main()<br>
+                  {<br>
+                  float peven(),podd(),dcall();<br>
+                  float sum;<br>
+                  int n;<br>
+                  while (1)<br>
+                  {<br>
+                  　scanf(&quot;%d&quot;,&amp;n);<br>
+                  　if(n&gt;1)<br>
+                  　　break;<br>
+                  }<br>
+                  if(n%2==0)<br>
+                  {<br>
+                  　printf(&quot;Even=&quot;);<br>
+                  　sum=dcall(peven,n);<br>
+                  }<br>
+                  else<br>
+                  {<br>
+                  　printf(&quot;Odd=&quot;);<br>
+                  　sum=dcall(podd,n);<br>
+                  }<br>
+                  printf(&quot;%f&quot;,sum);<br>
+                  }<br>
+                  float peven(int n)<br>
+                  {<br>
+                  float s;<br>
+                  int i;<br>
+                  s=1;<br>
+                  for(i=2;i&lt;=n;i+=2)<br>
+                  　s+=1/(float)i;<br>
+                  return(s);<br>
+                  }<br>
+                  float podd(n)<br>
+                  int n;<br>
+                  {<br>
+                  float s;<br>
+                  int i;<br>
+                  s=0;<br>
+                  for(i=1;i&lt;=n;i+=2)<br>
+                  　s+=1/(float)i;<br>
+                  return(s);<br>
+                  }<br>
+                  float dcall(fp,n)<br>
+                  float (*fp)();<br>
+                  int n;<br>
+                  {<br>
+                  float s;<br>
+                  s=(*fp)(n);<br>
+                  return(s);<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序77】</font><br>
+                  题目：填空练习（指向指针的指针）<br>
+                  1.程序分析：　　　　　<br>
+                  2.程序源代码：<br>
+                  main()<br>
+                  { char *s[]={&quot;man&quot;,&quot;woman&quot;,&quot;girl&quot;,&quot;boy&quot;,&quot;sister&quot;};<br>
+                  char **q;<br>
+                  int k;<br>
+                  for(k=0;k&lt;5;k++)<br>
+                  {　　　　　　　;/*这里填写什么语句*/<br>
+                  　printf(&quot;%s\n&quot;,*q);<br>
+                  }<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序78】</font><br>
+                  题目：找到年龄最大的人，并输出。请找出程序中有什么问题。<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  #define N 4<br>
+                  #include &quot;stdio.h&quot;<br>
+                  static struct man<br>
+                  { char name[20];<br>
+                  int age;<br>
+                  } person[N]={&quot;li&quot;,18,&quot;wang&quot;,19,&quot;zhang&quot;,20,&quot;sun&quot;,22};<br>
+                  main()<br>
+                  {struct man *q,*p;<br>
+                  int i,m=0;<br>
+                  p=person;<br>
+                  for (i=0;i&lt;N;i++)<br>
+                  {if(m&lt;p-&gt;age)<br>
+                  　q=p++;<br>
+                  　m=q-&gt;age;}<br>
+                  printf(&quot;%s,%d&quot;,(*q).name,(*q).age);<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序79】</font><br>
+                  题目：字符串排序。<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  main()<br>
+                  {<br>
+                  char *str1[20],*str2[20],*str3[20];<br>
+                  char swap();<br>
+                  printf(&quot;please input three strings\n&quot;);<br>
+                  scanf(&quot;%s&quot;,str1);<br>
+                  scanf(&quot;%s&quot;,str2);<br>
+                  scanf(&quot;%s&quot;,str3);<br>
+                  if(strcmp(str1,str2)&gt;0) swap(str1,str2);<br>
+                  if(strcmp(str1,str3)&gt;0) swap(str1,str3);<br>
+                  if(strcmp(str2,str3)&gt;0) swap(str2,str3);<br>
+                  printf(&quot;after being sorted\n&quot;);<br>
+                  printf(&quot;%s\n%s\n%s\n&quot;,str1,str2,str3);<br>
+                  }<br>
+                  char swap(p1,p2)<br>
+                  char *p1,*p2;<br>
+                  {<br>
+                  char *p[20];<br>
+                  strcpy(p,p1);strcpy(p1,p2);strcpy(p2,p);<br>
+                  }<br>
+                  ==============================================================<br>
+                  <font color="#990000">【程序80】</font><br>
+                  题目：海滩上有一堆桃子，五只猴子来分。第一只猴子把这堆桃子凭据分为五份，多了一个，这只<br>
+                  　　　猴子把多的一个扔入海中，拿走了一份。第二只猴子把剩下的桃子又平均分成五份，又多了<br>
+                  　　　一个，它同样把多的一个扔入海中，拿走了一份，第三、第四、第五只猴子都是这样做的，<br>
+                  　　　问海滩上原来最少有多少个桃子？<br>
+                  1.程序分析：<br>
+                  2.程序源代码：<br>
+                  main()<br>
+                  {int i,m,j,k,count;<br>
+                  for(i=4;i&lt;10000;i+=4)<br>
+                  { count=0;<br>
+                  m=i;<br>
+                  for(k=0;k&lt;5;k++)<br>
+                  {<br>
+                  　j=i/4*5+1;<br>
+                  　i=j;<br>
+                  　if(j%4==0)<br>
+                  　　count++;<br>
+                  　else<br>
+                  　　break;<br>
+                  }<br>
+                  　i=m;<br>
+                  　if(count==4)<br>
+                  　{printf(&quot;%d\n&quot;,count);<br>
+                  　　break;}<br>
+                  }<br>
+                  }
+                </td>
+              </tr>
+            </table>
+          </TD>
+          <TD bgColor=#ffffff height=56 width="91">　
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=56 width="93">　
+          </TD>
+          <TD bgColor=#ffffff height=56 width="91">　
+          </TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=1 width="758" colspan="3">
+            <hr>
+          </TD></TR>
+        <TR>
+          <TD bgColor=#000000 height=14 width="758" colspan="3">　</TD></TR>
+        <TR>
+          <TD align=middle height=26 width="758" colspan="3">
+            <TABLE cellSpacing=0 cellPadding=5 width="80%" border=0>
+              <TBODY>
+              <TR align=middle>
+                <TD>关于我们</TD>
+                <TD>新闻公告</TD>
+                <TD><a href="http://www.tzc.edu.cn">学院主页</a></TD>
+                <TD><a href="http://www.lib.tzc.edu.cn">图书馆</a></TD>
+                <TD>信息中心</TD>
+                <TD><a href="http://www.ie.tzc.edu.cn">信息与电子工程学院</a></TD>
+                <TD></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- #EndLibraryItem --></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=762 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD>
+    <TD width=760>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 border=0>
+        <TBODY>
+        <TR>
+          <TD bgColor=#d0d4d0 height=2><IMG height=1 
+            src="../image/spacer.gif" width=1></TD></TR>
+        <TR>
+          <TD bgColor=#000000 height=2><IMG height=1 
+            src="../image/spacer.gif" width=1></TD></TR>
+        <TR>
+          <TD bgColor=#618096><!-- #BeginLibraryItem "/Library/copyright.lbi" -->
+            <TABLE cellSpacing=0 cellPadding=6 width=500 align=center 
+              border=0><TBODY>
+              <TR>
+                <TD align=middle rowSpan=2></TD>
+                <TD align=middle><FONT 
+                  face="Verdana, Arial, Helvetica, sans-serif" color=#ffffff 
+                  size=1>Copyright &copy; 2003&nbsp; All rights                    
+                  reserved</FONT></TD>
+                <TD align=middle width=2 rowSpan=2></TD>
+                <TD align=middle width=2 rowSpan=2></TD></TR>
+              <TR>
+                <TD align=middle><font color="#ffffff">电教协会网络部制作、维护</font></TD></TR></TBODY></TABLE><!-- #EndLibraryItem --></TD></TR></TBODY></TABLE></TD>
+    <TD width=1 bgColor=#000000><IMG height=1 src="../image/spacer.gif" 
+      width=1></TD></TR></TBODY></TABLE></BODY></HTML>
